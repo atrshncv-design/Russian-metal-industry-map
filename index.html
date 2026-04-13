@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Металлургия России — Интерактивная карта</title>
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid #4caf50;
+            padding: 16px 24px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        }
+
+        .header h1 span {
+            color: #4caf50;
+        }
+
+        /* ===== CONTROLS ===== */
+        .controls {
+            display: flex;
+            justify-content: center;
+            padding: 16px 24px;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(76, 175, 80, 0.4);
+            color: #ccc;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            background: rgba(76, 175, 80, 0.15);
+            border-color: #4caf50;
+            color: #fff;
+        }
+
+        .tab-btn.active {
+            background: rgba(76, 175, 80, 0.25);
+            border-color: #4caf50;
+            color: #4caf50;
+            font-weight: 600;
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+        }
+
+        /* ===== MAIN LAYOUT ===== */
+        .main-container {
+            display: flex;
+            gap: 20px;
+            padding: 0 24px 24px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .map-wrapper {
+            flex: 2;
+            min-width: 0;
+        }
+
+        .map-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .map-title {
+            text-align: center;
+            font-size: 16px;
+            color: #4caf50;
+            margin-bottom: 12px;
+            min-height: 24px;
+            line-height: 1.4;
+        }
+
+        .svg-container {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-bg-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .svg-container svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* SVG Region Styling */
+        .svg-container svg path.russia-region {
+            stroke: rgba(40, 40, 40, 0.4);
+            stroke-width: 0.3;
+            opacity: 0.65;
+            transition: fill 0.4s ease, stroke 0.3s ease, stroke-width 0.2s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .svg-container svg path.russia-region:hover {
+            stroke: #fff;
+            stroke-width: 1;
+            opacity: 0.85;
+            filter: brightness(1.15) drop-shadow(0 0 3px rgba(76, 175, 80, 0.6));
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            flex: 0 0 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .panel {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .panel-title {
+            font-size: 15px;
+            color: #4caf50;
+            margin-bottom: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .panel-title .emoji {
+            font-size: 18px;
+        }
+
+        /* ===== LEGEND ===== */
+        .legend-items {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .legend-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: #ccc;
+        }
+
+        .legend-color {
+            width: 36px;
+            height: 22px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            flex-shrink: 0;
+        }
+
+        .legend-label {
+            line-height: 1.3;
+        }
+
+        .legend-label .unit {
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        /* ===== STATISTICS ===== */
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .stats-table td {
+            padding: 8px 4px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .stats-table td:first-child {
+            color: #aaa;
+        }
+
+        .stats-table td:last-child {
+            text-align: right;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .stats-table .stat-sub {
+            display: block;
+            font-size: 11px;
+            color: #888;
+            font-weight: 400;
+        }
+
+        /* ===== TOOLTIP ===== */
+        .tooltip {
+            position: absolute;
+            background: rgba(10, 10, 30, 0.95);
+            border: 1px solid #4caf50;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 13px;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.15s;
+            max-width: 280px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .tooltip.visible {
+            opacity: 1;
+        }
+
+        .tooltip-name {
+            font-weight: 600;
+            color: #4caf50;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .tooltip-value {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .tooltip-unit {
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        /* ===== LOADING ===== */
+        .loading-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(26, 26, 46, 0.9);
+            border-radius: 15px;
+            z-index: 500;
+            font-size: 16px;
+            color: #4caf50;
+        }
+
+        .loading-overlay.hidden {
+            display: none;
+        }
+
+        .spinner {
+            width: 32px;
+            height: 32px;
+            border: 3px solid rgba(76, 175, 80, 0.2);
+            border-top: 3px solid #4caf50;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 12px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                flex: none;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .panel {
+                flex: 1;
+                min-width: 250px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 18px;
+            }
+            .controls {
+                gap: 6px;
+                padding: 12px 16px;
+            }
+            .tab-btn {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+            .main-container {
+                padding: 0 12px 12px;
+            }
+            .map-container {
+                padding: 12px;
+            }
+        }
+
+        /* ===== EXPORT BUTTONS ===== */
+        .export-bar {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            padding: 0 24px 20px;
+            flex-wrap: wrap;
+        }
+
+        .export-btn {
+            background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+            border: none;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(76,175,80,0.3);
+        }
+
+        .export-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(76,175,80,0.4);
+            background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+        }
+
+        .export-btn:active {
+            transform: translateY(0);
+        }
+
+        .export-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .export-btn .btn-icon {
+            font-size: 16px;
+        }
+
+        .export-btn.secondary {
+            background: linear-gradient(135deg, #546e7a 0%, #37474f 100%);
+            box-shadow: 0 2px 8px rgba(84,110,122,0.3);
+        }
+
+        .export-btn.secondary:hover {
+            background: linear-gradient(135deg, #607d8b 0%, #546e7a 100%);
+            box-shadow: 0 4px 14px rgba(84,110,122,0.4);
+        }
+
+
+
+        /* ===== NOSCRIPT ===== */
+        .noscript-msg {
+            text-align: center;
+            padding: 40px;
+            color: #ccc;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1><span>Металлургия</span> России — Интерактивная карта</h1>
+</div>
+
+<div class="controls" id="tabControls">
+    <button class="tab-btn active" data-key="employment">Занятость</button>
+    <button class="tab-btn" data-key="shipment">Отгрузка</button>
+    <button class="tab-btn" data-key="budget">Бюджет</button>
+    <button class="tab-btn" data-key="localization">Локализация</button>
+</div>
+
+<div class="export-bar">
+    <button class="export-btn" id="btnSaveCurrent"><span class="btn-icon">&#128247;</span> Сохранить текущую карту</button>
+    <button class="export-btn secondary" id="btnSaveAll"><span class="btn-icon">&#128230;</span> Сохранить все карты (PNG)</button>
+</div>
+
+<div class="main-container">
+    <div class="map-wrapper">
+        <div class="map-container" id="mapContainer">
+            <div class="map-title" id="mapTitle">Распределение занятых в металлургии в 2024 г.</div>
+            <div class="svg-container" id="svgContainer">
+                <img class="map-bg-img" id="mapBgImg" src="russia_bg.png" alt="Карта субъектов РФ" />
+                <div class="loading-overlay" id="loadingOverlay">
+                    <div class="spinner"></div>
+                    <span>Загрузка карты...</span>
+                </div>
+            </div>
+            <div class="tooltip" id="tooltip">
+                <div class="tooltip-name" id="tooltipName"></div>
+                <div class="tooltip-value" id="tooltipValue"></div>
+                <div class="tooltip-unit" id="tooltipUnit"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="panel">
+            <div class="panel-title"><span class="emoji">&#128202;</span> Легенда</div>
+            <div class="legend-items" id="legendItems"></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title"><span class="emoji">&#128200;</span> Статистика</div>
+            <table class="stats-table" id="statsTable">
+                <tr><td colspan="2" style="color:#666;">Загрузка данных...</td></tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<noscript>
+    <div class="noscript-msg">Для работы интерактивной карты необходим включённый JavaScript.</div>
+</noscript>
+
+<script>
+(function () {
+    'use strict';
+
+    /* ===================================================================
+       ДАННЫЕ
+       =================================================================== */
+    var DATASETS = {
+        employment: {
+            title: "Распределение занятых в металлургии в 2024 г.",
+            scale: [0, 2, 4, 6, 8],
+            unit: "%",
+            data: {
+                "Вологодская область": 5.39, "Свердловская область": 5.01, "Липецкая область": 4.96,
+                "Челябинская область": 4.65, "Хабаровский край": 3.96, "Красноярский край": 3.50,
+                "Мурманская область": 2.20, "Кемеровская область - Кузбасс": 2.14,
+                "Республика Хакасия": 1.89, "Тульская область": 1.78, "Оренбургская область": 1.60,
+                "Волгоградская область": 1.55, "Нижегородская область": 1.33, "Белгородская область": 1.23,
+                "Пермский край": 1.18, "Удмуртская Республика": 1.10, "Забайкальский край": 0.93,
+                "Калужская область": 0.89, "Иркутская область": 0.88, "Республика Мордовия": 0.84,
+                "Кировская область": 0.78, "Томская область": 0.76, "Рязанская область": 0.74,
+                "Брянская область": 0.70, "Орловская область": 0.64, "Ростовская область": 0.63,
+                "Костромская область": 0.56, "Чувашская Республика": 0.53, "Ульяновская область": 0.51,
+                "Ленинградская область": 0.49, "Московская область": 0.49,
+                "Республика Алтай": 0.49, "Владимирская область": 0.46, "Алтайский край": 0.45,
+                "Смоленская область": 0.43, "Самарская область": 0.42,
+                "Республика Башкортостан": 0.41, "Новосибирская область": 0.40,
+                "Ивановская область": 0.39, "Воронежская область": 0.35, "Краснодарский край": 0.34,
+                "Республика Северная Осетия-Алания": 0.34, "Саратовская область": 0.33,
+                "Тамбовская область": 0.33, "Республика Коми": 0.32, "Республика Карелия": 0.30,
+                "Омская область": 0.30, "Республика Татарстан": 0.29, "город Санкт-Петербург": 0.28,
+                "Пензенская область": 0.26, "Новгородская область": 0.23, "Республика Бурятия": 0.19,
+                "Республика Тыва": 0.18, "Тверская область": 0.15, "Курганская область": 0.14,
+                "Еврейская автономная область": 0.14, "Приморский край": 0.13,
+                "Калининградская область": 0.13, "город Москва": 0.13, "Астраханская область": 0.11,
+                "Тюменская область": 0.10, "Курская область": 0.10, "Псковская область": 0.09,
+                "Ярославская область": 0.09, "Ставропольский край": 0.08,
+                "Республика Ингушетия": 0.07, "Республика Марий-Эл": 0.07,
+                "Республика Адыгея": 0.05, "Республика Крым": 0.05, "Сахалинская область": 0.04,
+                "город Севастополь": 0.04, "Архангельская область": 0.03,
+                "Ханты-Мансийский автономный округ - Югра": 0.03, "Магаданская область": 0.02,
+                "Республика Саха (Якутия)": 0.02, "Республика Дагестан": 0.02,
+                "Чеченская Республика": 0.01, "Амурская область": 0.01, "Камчатский край": 0.01,
+                "Кабардино-Балкарская Республика": 0.00, "Ямало-Ненецкий автономный округ": 0.00,
+                "Республика Калмыкия": 0.00, "Ненецкий автономный округ": 0.00,
+                "Карачаево-Черкесская Республика": 0.00, "Чукотский автономный округ": 0.00
+            }
+        },
+        localization: {
+            title: "Коэффициент локализации",
+            scale: [0, 2, 4, 6, 8],
+            unit: "",
+            data: {
+                "Мурманская область": 7.63, "Липецкая область": 7.24, "Красноярский край": 6.64,
+                "Вологодская область": 6.54, "Челябинская область": 5.11, "Республика Хакасия": 4.76,
+                "Свердловская область": 4.65, "Республика Ингушетия": 2.17,
+                "Кемеровская область - Кузбасс": 1.95, "Волгоградская область": 1.78,
+                "Иркутская область": 1.63, "Оренбургская область": 1.48, "Тульская область": 1.30,
+                "Белгородская область": 1.25, "Хабаровский край": 1.24, "Тамбовская область": 1.08,
+                "Нижегородская область": 0.92, "Саратовская область": 0.84, "Орловская область": 0.82,
+                "Самарская область": 0.78, "Кировская область": 0.78, "Республика Мордовия": 0.77,
+                "Калужская область": 0.76, "Новгородская область": 0.74, "Ростовская область": 0.73,
+                "Удмуртская Республика": 0.70, "Республика Коми": 0.69,
+                "Ивановская область": 0.63, "Краснодарский край": 0.56,
+                "Новосибирская область": 0.55, "город Москва": 0.52, "Костромская область": 0.51,
+                "Республика Северная Осетия-Алания": 0.50, "Рязанская область": 0.49,
+                "Пермский край": 0.49, "Республика Алтай": 0.48, "Томская область": 0.40,
+                "Республика Бурятия": 0.40, "Смоленская область": 0.38, "Московская область": 0.37,
+                "Ульяновская область": 0.33, "Ставропольский край": 0.31, "Тюменская область": 0.23,
+                "Брянская область": 0.22, "Воронежская область": 0.22, "Чувашская Республика": 0.20,
+                "Республика Башкортостан": 0.19, "Владимирская область": 0.18,
+                "город Санкт-Петербург": 0.17, "Республика Карелия": 0.17,
+                "Ленинградская область": 0.16, "Республика Татарстан": 0.15,
+                "Пензенская область": 0.13, "Алтайский край": 0.13, "Курганская область": 0.11,
+                "Омская область": 0.11, "Приморский край": 0.08, "Астраханская область": 0.08,
+                "Тверская область": 0.08, "Республика Адыгея": 0.08, "Псковская область": 0.03,
+                "Калининградская область": 0.03, "Ярославская область": 0.03, "Камчатский край": 0.01,
+                "Республика Крым": 0.01, "Еврейская автономная область": 0.01,
+                "город Севастополь": 0.01, "Забайкальский край": 0.01, "Архангельская область": 0.00,
+                "Республика Марий-Эл": 0.00, "Сахалинская область": 0.00, "Амурская область": 0.00,
+                "Ханты-Мансийский автономный округ - Югра": 0.00,
+                "Кабардино-Балкарская Республика": 0.00, "Республика Саха (Якутия)": 0.00,
+                "Курская область": 0.00, "Республика Дагестан": 0.00, "Ненецкий автономный округ": 0.00,
+                "Карачаево-Черкесская Республика": 0.00, "Чеченская Республика": 0.00,
+                "Республика Калмыкия": 0.00, "Ямало-Ненецкий автономный округ": 0.00,
+                "Республика Тыва": 0.00, "Магаданская область": 0.00, "Чукотский автономный округ": 0.00
+            }
+        },
+        shipment: {
+            title: "Распределение объёма отгруженных товаров металлургии в 2025 г.",
+            scale: [0, 10, 20, 30, 40],
+            unit: "%",
+            data: {
+                "Мурманская область": 37.79, "Липецкая область": 35.86, "Красноярский край": 32.85,
+                "Вологодская область": 32.36, "Челябинская область": 25.30, "Республика Хакасия": 23.59,
+                "Свердловская область": 23.04, "Республика Ингушетия": 10.74,
+                "Кемеровская область - Кузбасс": 9.66, "Волгоградская область": 8.82,
+                "Иркутская область": 8.09, "Оренбургская область": 7.31, "Тульская область": 6.43,
+                "Белгородская область": 6.20, "Хабаровский край": 6.14, "Тамбовская область": 5.33,
+                "Нижегородская область": 4.57, "Саратовская область": 4.16, "Орловская область": 4.04,
+                "Самарская область": 3.87, "Кировская область": 3.85, "Республика Мордовия": 3.83,
+                "Калужская область": 3.74, "Новгородская область": 3.65, "Ростовская область": 3.62,
+                "Удмуртская Республика": 3.44, "Республика Коми": 3.43,
+                "Ивановская область": 3.12, "Краснодарский край": 2.76,
+                "Новосибирская область": 2.72, "город Москва": 2.57, "Костромская область": 2.52,
+                "Республика Северная Осетия-Алания": 2.46, "Рязанская область": 2.44,
+                "Пермский край": 2.42, "Республика Алтай": 2.38, "Томская область": 1.99,
+                "Республика Бурятия": 1.96, "Смоленская область": 1.89, "Московская область": 1.83,
+                "Ульяновская область": 1.61, "Ставропольский край": 1.52, "Тюменская область": 1.12,
+                "Брянская область": 1.09, "Воронежская область": 1.09, "Чувашская Республика": 1.01,
+                "Республика Башкортостан": 0.95, "Владимирская область": 0.87,
+                "город Санкт-Петербург": 0.85, "Республика Карелия": 0.83,
+                "Ленинградская область": 0.78, "Республика Татарстан": 0.75,
+                "Пензенская область": 0.64, "Алтайский край": 0.63, "Курганская область": 0.56,
+                "Омская область": 0.56, "Приморский край": 0.42, "Астраханская область": 0.39,
+                "Тверская область": 0.39, "Республика Адыгея": 0.37, "Псковская область": 0.17,
+                "Калининградская область": 0.17, "Ярославская область": 0.16, "Камчатский край": 0.04,
+                "Республика Крым": 0.04, "Еврейская автономная область": 0.03,
+                "город Севастополь": 0.03, "Забайкальский край": 0.03, "Архангельская область": 0.02,
+                "Республика Марий-Эл": 0.01, "Сахалинская область": 0.01, "Амурская область": 0.00,
+                "Ханты-Мансийский автономный округ - Югра": 0.00,
+                "Кабардино-Балкарская Республика": 0.00, "Республика Саха (Якутия)": 0.00,
+                "Курская область": 0.00, "Республика Дагестан": 0.00, "Ненецкий автономный округ": 0.00,
+                "Карачаево-Черкесская Республика": 0.00, "Чеченская Республика": 0.00,
+                "Республика Калмыкия": 0.00, "Ямало-Ненецкий автономный округ": 0.00,
+                "Республика Тыва": 0.00, "Магаданская область": 0.00, "Чукотский автономный округ": 0.00
+            }
+        },
+        budget: {
+            title: "Участие металлургии в формировании консолидированных бюджетов регионов РФ в 2025 г.",
+            scale: [0, 2, 4, 6, 8],
+            unit: "%",
+            data: {
+                "Вологодская область": 6.7, "Челябинская область": 6.0, "Свердловская область": 4.9,
+                "Красноярский край": 4.5, "Мурманская область": 4.4, "Липецкая область": 4.0,
+                "Кемеровская область - Кузбасс": 2.5, "Республика Хакасия": 2.4,
+                "Нижегородская область": 2.3, "Тульская область": 2.1, "Волгоградская область": 1.8,
+                "Республика Мордовия": 1.7, "Белгородская область": 1.6, "Иркутская область": 1.3,
+                "Томская область": 1.3, "Забайкальский край": 1.2, "Оренбургская область": 1.1,
+                "Кировская область": 1.1, "Калужская область": 1.0, "Пермский край": 0.9,
+                "Самарская область": 0.8, "Хабаровский край": 0.8, "Орловская область": 0.7,
+                "Рязанская область": 0.7, "Костромская область": 0.6, "Ростовская область": 0.6,
+                "Новосибирская область": 0.5, "Ульяновская область": 0.5, "Тамбовская область": 0.5,
+                "Московская область": 0.5, "Смоленская область": 0.4, "Чувашская Республика": 0.4,
+                "Удмуртская Республика": 0.4, "Брянская область": 0.4, "Саратовская область": 0.4,
+                "Ленинградская область": 0.4, "Омская область": 0.3, "Владимирская область": 0.3,
+                "Воронежская область": 0.3, "город Москва": 0.2, "Тюменская область": 0.2,
+                "Краснодарский край": 0.2, "Республика Северная Осетия-Алания": 0.2,
+                "Ивановская область": 0.2, "Пензенская область": 0.2, "Республика Татарстан": 0.2,
+                "Республика Башкортостан": 0.2, "Тверская область": 0.2, "Республика Ингушетия": 0.1,
+                "Новгородская область": 0.1, "Алтайский край": 0.1, "Курганская область": 0.1,
+                "Ставропольский край": 0.1, "Астраханская область": 0.1, "город Санкт-Петербург": 0.1,
+                "Приморский край": 0.1, "Республика Саха (Якутия)": 0.1,
+                "Ямало-Ненецкий автономный округ": 0.1, "Ярославская область": 0.1,
+                "Псковская область": 0.1, "Республика Бурятия": 0.0, "Калининградская область": 0.0,
+                "Курская область": 0.0, "Магаданская область": 0.0, "Республика Адыгея": 0.0,
+                "Кабардино-Балкарская Республика": 0.0, "Чукотский автономный округ": 0.0,
+                "Архангельская область": 0.0, "Ханты-Мансийский автономный округ - Югра": 0.0,
+                "Республика Алтай": 0.0, "Еврейская автономная область": 0.0,
+                "Чеченская Республика": 0.0, "Камчатский край": 0.0, "Республика Крым": 0.0,
+                "Амурская область": 0.0, "Республика Калмыкия": 0.0, "Сахалинская область": 0.0,
+                "Республика Марий-Эл": 0.0, "город Севастополь": 0.0, "Республика Дагестан": 0.0,
+                "Ненецкий автономный округ": 0.0, "Карачаево-Черкесская Республика": 0.0,
+                "Республика Тыва": 0.0, "Республика Коми": -0.0, "Республика Карелия": -0.5
+            }
+        }
+    };
+
+    /* ===================================================================
+       МАППИНГ: Название региона → SVG id
+       Составлено на основе russia.json + ID SVG из репозитория
+       =================================================================== */
+    var REGION_TO_ID = {
+        "Республика Адыгея": "RU-AD",
+        "Республика Алтай": "RU-AL",
+        "Алтайский край": "RU-ALT",
+        "Амурская область": "RU-AMU",
+        "Архангельская область": "RU-ARK",
+        "Астраханская область": "RU-AST",
+        "Республика Башкортостан": "RU-BA",
+        "Белгородская область": "RU-BEL",
+        "Брянская область": "RU-BRY",
+        "Республика Бурятия": "RU-BU",
+        "Чеченская Республика": "RU-CE",
+        "Челябинская область": "RU-CHE",
+        "Чукотский автономный округ": "RU-CHU",
+        "Республика Крым": "RU-CR",
+        "Чувашская Республика": "RU-CU",
+        "Республика Дагестан": "RU-DA",
+        "Республика Ингушетия": "RU-IN",
+        "Иркутская область": "RU-IRK",
+        "Ивановская область": "RU-IVA",
+        "Камчатский край": "RU-KAM",
+        "Кабардино-Балкарская Республика": "RU-KB",
+        "Карачаево-Черкесская Республика": "RU-KC",
+        "Краснодарский край": "RU-KDA",
+        "Кемеровская область - Кузбасс": "RU-KEM",
+        "Калининградская область": "RU-KGD",
+        "Курганская область": "RU-KGN",
+        "Хабаровский край": "RU-KHA",
+        "Ханты-Мансийский автономный округ - Югра": "RU-KHM",
+        "Кировская область": "RU-KIR",
+        "Республика Хакасия": "RU-KK",
+        "Республика Калмыкия": "RU-KL",
+        "Калужская область": "RU-KLU",
+        "Республика Коми": "RU-KO",
+        "Костромская область": "RU-KOS",
+        "Республика Карелия": "RU-KR",
+        "Курская область": "RU-KRS",
+        "Красноярский край": "RU-KYA",
+        "Ленинградская область": "RU-LEN",
+        "Липецкая область": "RU-LIP",
+        "Магаданская область": "RU-MAG",
+        "Республика Марий-Эл": "RU-ME",
+        "Республика Мордовия": "RU-MO",
+        "Московская область": "RU-MOS",
+        "город Москва": "RU-MOW",
+        "Мурманская область": "RU-MUR",
+        "Ненецкий автономный округ": "RU-NEN",
+        "Новгородская область": "RU-NGR",
+        "Нижегородская область": "RU-NIZ",
+        "Новосибирская область": "RU-NVS",
+        "Омская область": "RU-OMS",
+        "Оренбургская область": "RU-ORE",
+        "Орловская область": "RU-ORL",
+        "Пермский край": "RU-PER",
+        "Пензенская область": "RU-PNZ",
+        "Приморский край": "RU-PRI",
+        "Псковская область": "RU-PSK",
+        "Ростовская область": "RU-ROS",
+        "Рязанская область": "RU-RYA",
+        "Республика Саха (Якутия)": "RU-SA",
+        "Сахалинская область": "RU-SAK",
+        "Самарская область": "RU-SAM",
+        "Саратовская область": "RU-SAR",
+        "Республика Северная Осетия-Алания": "RU-SE",
+        "город Севастополь": "RU-SEV",
+        "Смоленская область": "RU-SMO",
+        "город Санкт-Петербург": "RU-SPE",
+        "Ставропольский край": "RU-STA",
+        "Свердловская область": "RU-SVE",
+        "Республика Татарстан": "RU-TA",
+        "Тамбовская область": "RU-TAM",
+        "Томская область": "RU-TOM",
+        "Тульская область": "RU-TUL",
+        "Тверская область": "RU-TVE",
+        "Республика Тыва": "RU-TY",
+        "Тюменская область": "RU-TYU",
+        "Удмуртская Республика": "RU-UD",
+        "Ульяновская область": "RU-ULY",
+        "Волгоградская область": "RU-VGG",
+        "Владимирская область": "RU-VLA",
+        "Вологодская область": "RU-VLG",
+        "Воронежская область": "RU-VOR",
+        "Ямало-Ненецкий автономный округ": "RU-YAN",
+        "Ярославская область": "RU-YAR",
+        "Еврейская автономная область": "RU-YEV",
+        "Забайкальский край": "RU-ZAB",
+        /* Новые регионы */
+        "Донецкая Народная Республика": "RU-DPR",
+        "Луганская Народная Республика": "RU-LPR",
+        "Запорожская область": "RU-ZAP",
+        "Херсонская область": "RU-KHE"
+    };
+
+    /* SVG path-данные для 4 новых регионов (приближительные контуры) */
+    var NEW_REGION_PATHS = {
+        "RU-LPR": "M-28,278 L-18,276 L-8,278 L-2,284 L2,292 L6,302 L2,312 L-4,318 L-10,322 L-18,324 L-26,322 L-32,318 L-38,312 L-42,302 L-38,292 L-32,284 Z",
+        "RU-DPR": "M-10,322 L-4,318 L2,312 L6,302 L10,312 L14,322 L10,334 L4,348 L-2,358 L-10,368 L-18,372 L-26,370 L-32,362 L-36,352 L-38,342 L-36,332 L-26,326 L-18,324 Z",
+        "RU-ZAP": "M-36,352 L-32,362 L-26,370 L-18,372 L-10,380 L-4,390 L0,400 L-6,410 L-14,418 L-22,420 L-30,416 L-38,408 L-44,396 L-48,384 L-44,372 L-40,362 Z",
+        "RU-KHE": "M-30,416 L-22,420 L-14,418 L-6,426 L0,434 L-4,442 L-10,450 L-18,454 L-26,452 L-34,446 L-40,438 L-44,428 L-48,418 L-44,408 L-38,408 Z"
+    };
+
+    /* Обратный маппинг для тултипов: SVG id → название */
+    var ID_TO_NAME = {};
+    Object.keys(REGION_TO_ID).forEach(function (name) {
+        ID_TO_NAME[REGION_TO_ID[name]] = name;
+    });
+
+    /* Регионы, всегда белые (нет данных) */
+    var ALWAYS_WHITE = [
+        "Донецкая Народная Республика",
+        "Луганская Народная Республика",
+        "Запорожская область",
+        "Херсонская область"
+    ];
+
+    /**
+     * Добавляет SVG path-элементы для 4 новых регионов.
+     */
+    function injectNewRegions(svg) {
+        var firstPath = svg.querySelector('path');
+        var parent = firstPath ? firstPath.parentNode : svg;
+
+        Object.keys(NEW_REGION_PATHS).forEach(function (id) {
+            var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('id', id);
+            path.setAttribute('class', 'russia-region');
+            path.setAttribute('d', NEW_REGION_PATHS[id]);
+            path.style.fill = '#FFFFFF';
+            path.style.stroke = 'rgba(76, 175, 80, 0.5)';
+            path.style.strokeWidth = '0.4';
+            path.style.transition = 'fill 0.4s ease, stroke 0.3s ease, stroke-width 0.2s ease';
+            path.style.cursor = 'pointer';
+
+            var name = ID_TO_NAME[id] || id;
+            path.setAttribute('data-name', name);
+            path.setAttribute('data-value', '');
+            path.setAttribute('data-unit', '%');
+
+            if (firstPath) {
+                parent.insertBefore(path, firstPath);
+            } else {
+                parent.appendChild(path);
+            }
+        });
+    }
+
+    /* ===================================================================
+       ЗЕЛЁНАЯ ЦВЕТОВАЯ ШКАЛА
+       =================================================================== */
+    var GREEN_STOPS = [
+        { pos: 0,    r: 232, g: 245, b: 233 },   /* #e8f5e9 — самый светлый */
+        { pos: 0.25, r: 165, g: 214, b: 167 },   /* #a5d6a7 */
+        { pos: 0.50, r: 102, g: 187, b: 106 },   /* #66bb6a */
+        { pos: 0.75, r:  56, g: 142, b:  60 },   /* #388e3c */
+        { pos: 1.00, r:  27, g:  94, b:  32 }    /* #1b5e20 — самый тёмный */
+    ];
+
+    /**
+     * Интерполирует цвет по значению (value) в пределах [scaleMin, scaleMax].
+     * Возвращает строку rgb(r,g,b).
+     */
+    function getColor(value, scaleMin, scaleMax) {
+        if (scaleMax === scaleMin) return 'rgb(232,245,233)';
+        var t = (value - scaleMin) / (scaleMax - scaleMin);
+        t = Math.max(0, Math.min(1, t));
+
+        /* Находим два соседних стопа */
+        var lower = GREEN_STOPS[0], upper = GREEN_STOPS[GREEN_STOPS.length - 1];
+        for (var i = 0; i < GREEN_STOPS.length - 1; i++) {
+            if (t >= GREEN_STOPS[i].pos && t <= GREEN_STOPS[i + 1].pos) {
+                lower = GREEN_STOPS[i];
+                upper = GREEN_STOPS[i + 1];
+                break;
+            }
+        }
+
+        var localT = (upper.pos === lower.pos) ? 0 : (t - lower.pos) / (upper.pos - lower.pos);
+        var r = Math.round(lower.r + (upper.r - lower.r) * localT);
+        var g = Math.round(lower.g + (upper.g - lower.g) * localT);
+        var b = Math.round(lower.b + (upper.b - lower.b) * localT);
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+    }
+
+    /* ===================================================================
+       СОСТОЯНИЕ
+       =================================================================== */
+    var currentKey = 'employment';
+
+    /* DOM-элементы */
+    var mapTitle      = document.getElementById('mapTitle');
+    var svgContainer  = document.getElementById('svgContainer');
+    var tooltip       = document.getElementById('tooltip');
+    var tooltipName   = document.getElementById('tooltipName');
+    var tooltipValue  = document.getElementById('tooltipValue');
+    var tooltipUnit   = document.getElementById('tooltipUnit');
+    var legendItems   = document.getElementById('legendItems');
+    var statsTable    = document.getElementById('statsTable');
+    var loadingOverlay = document.getElementById('loadingOverlay');
+    var tabControls   = document.getElementById('tabControls');
+
+    /* ===================================================================
+       ЗАГРУЗКА SVG КАРТЫ
+       =================================================================== */
+    function loadMap(callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://raw.githubusercontent.com/ArmGono/ru-svg-map/master/russia.svg', true);
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                /* Парсим SVG */
+                var parser = new DOMParser();
+                var doc = parser.parseFromString(xhr.responseText, 'image/svg+xml');
+                var svg = doc.documentElement;
+                svg.removeAttribute('width');
+                svg.removeAttribute('height');
+                /* Расширяем viewBox влево для новых регионов (ДНР, ЛНР, Запорожье, Херсон) */
+                svg.setAttribute('viewBox', '-80 -5 1085 480');
+                svg.style.width = '100%';
+                svg.style.height = '100%';
+                svg.style.display = 'block';
+                svg.style.position = 'absolute';
+                svg.style.top = '0';
+                svg.style.left = '0';
+
+                svgContainer.appendChild(svg);
+                callback(svg);
+            } else {
+                svgContainer.innerHTML = '<p style="color:#ff6666;padding:40px;text-align:center;">Ошибка загрузки карты (статус ' + xhr.status + ').</p>';
+            }
+        };
+        xhr.onerror = function () {
+            svgContainer.innerHTML = '<p style="color:#ff6666;padding:40px;text-align:center;">Ошибка сети при загрузке карты.</p>';
+        };
+        xhr.send();
+    }
+
+    /* ===================================================================
+       РЕНДЕР КАРТЫ
+       =================================================================== */
+    function renderMap(svg) {
+        var ds = DATASETS[currentKey];
+        var scale = ds.scale;
+        var scaleMin = scale[0];
+        var scaleMax = scale[scale.length - 1];
+
+        mapTitle.textContent = ds.title;
+
+        /* Собираем все path-элементы */
+        var paths = svg.querySelectorAll('path.russia-region');
+        if (paths.length === 0) {
+            paths = svg.querySelectorAll('path');
+        }
+
+        paths.forEach(function (path) {
+            var id = path.getAttribute('id');
+            var name = ID_TO_NAME[id] || null;
+            var value = (name && ds.data.hasOwnProperty(name)) ? ds.data[name] : null;
+
+            if (!name || value === null) {
+                path.style.fill = '#d0d0d0'; /* Нет данных — серый */
+                path.setAttribute('data-name', name || id);
+                path.setAttribute('data-value', '');
+                path.setAttribute('data-unit', ds.unit);
+                return;
+            }
+
+            /* Исключение 1: всегда белые регионы */
+            if (ALWAYS_WHITE.indexOf(name) !== -1) {
+                path.style.fill = '#FFFFFF';
+                path.setAttribute('data-name', name);
+                path.setAttribute('data-value', value);
+                path.setAttribute('data-unit', ds.unit);
+                return;
+            }
+
+            /* Исключение 2: budget и значение -0.5 */
+            if (currentKey === 'budget' && value === -0.5) {
+                path.style.fill = '#FFFFFF';
+                path.setAttribute('data-name', name);
+                path.setAttribute('data-value', value);
+                path.setAttribute('data-unit', ds.unit);
+                return;
+            }
+
+            /* Обычная раскраска */
+            var color = getColor(value, scaleMin, scaleMax);
+            path.style.fill = color;
+            path.setAttribute('data-name', name);
+            path.setAttribute('data-value', value);
+            path.setAttribute('data-unit', ds.unit);
+        });
+
+        /* Обновляем легенду и статистику */
+        renderLegend(ds);
+        renderStats(ds);
+    }
+
+    /* ===================================================================
+       ЛЕГЕНДА
+       =================================================================== */
+    function renderLegend(ds) {
+        var scale = ds.scale;
+        var scaleMin = scale[0];
+        var scaleMax = scale[scale.length - 1];
+        var unit = ds.unit;
+        var html = '';
+
+        /* Порядок убывания: от максимального диапазона к минимальному */
+        for (var i = scale.length - 2; i >= 0; i--) {
+            var from = scale[i];
+            var to = scale[i + 1];
+            /* Цвет берём как средний для диапазона */
+            var midVal = (from + to) / 2;
+            var color = getColor(midVal, scaleMin, scaleMax);
+            var label = to + ' – ' + from + (unit ? ' ' + unit : '');
+            html += '<div class="legend-row">'
+                  + '<div class="legend-color" style="background:' + color + ';"></div>'
+                  + '<div class="legend-label">' + label + '</div>'
+                  + '</div>';
+        }
+
+        /* Добавляем белый блок-исключение для бюджетной карты (в конце) */
+        if (currentKey === 'budget') {
+            html += '<div class="legend-row">'
+                  + '<div class="legend-color" style="background:#FFFFFF;"></div>'
+                  + '<div class="legend-label">Значение -0.5 <span class="unit">(нет данных)</span></div>'
+                  + '</div>';
+        }
+
+        legendItems.innerHTML = html;
+    }
+
+    /* ===================================================================
+       СТАТИСТИКА
+       =================================================================== */
+    function renderStats(ds) {
+        var values = Object.keys(ds.data).map(function (k) { return ds.data[k]; });
+        var count = values.length;
+        var sum = values.reduce(function (a, b) { return a + b; }, 0);
+        var avg = count > 0 ? (sum / count) : 0;
+        var max = Math.max.apply(null, values);
+        var min = Math.min.apply(null, values);
+
+        var maxName = '', minName = '';
+        Object.keys(ds.data).forEach(function (k) {
+            if (ds.data[k] === max) maxName = k;
+            if (ds.data[k] === min) minName = k;
+        });
+
+        var unit = ds.unit;
+        function fmt(v) {
+            if (unit === '%') return v.toFixed(2) + ' %';
+            return v.toFixed(2);
+        }
+
+        statsTable.innerHTML =
+            '<tr><td>Всего регионов</td><td>' + count + '</td></tr>'
+          + '<tr><td>Сумма</td><td>' + fmt(sum) + '</td></tr>'
+          + '<tr><td>Среднее</td><td>' + fmt(avg) + '</td></tr>'
+          + '<tr><td>Максимум</td><td>' + fmt(max) + '<span class="stat-sub">' + maxName + '</span></td></tr>'
+          + '<tr><td>Минимум</td><td>' + fmt(min) + '<span class="stat-sub">' + minName + '</span></td></tr>';
+    }
+
+    /* ===================================================================
+       ТУЛТИПЫ
+       =================================================================== */
+    function setupTooltips(svg) {
+        var mapContainer = document.getElementById('mapContainer');
+
+        svgContainer.addEventListener('mouseenter', function (e) {
+            var target = e.target;
+            if (target.tagName && target.tagName.toLowerCase() === 'path' && target.getAttribute('data-name')) {
+                showTooltip(e, target);
+            }
+        }, true);
+
+        svgContainer.addEventListener('mousemove', function (e) {
+            var target = e.target;
+            if (target.tagName && target.tagName.toLowerCase() === 'path' && target.getAttribute('data-name')) {
+                moveTooltip(e);
+            }
+        }, true);
+
+        svgContainer.addEventListener('mouseleave', function (e) {
+            var target = e.target;
+            if (target.tagName && target.tagName.toLowerCase() === 'path') {
+                hideTooltip();
+            }
+        }, true);
+
+        function showTooltip(e, el) {
+            var name = el.getAttribute('data-name') || '';
+            var val  = el.getAttribute('data-value') || '';
+            var unit = el.getAttribute('data-unit') || '';
+
+            tooltipName.textContent = name;
+            tooltipValue.textContent = val !== '' ? val : 'Нет данных';
+            tooltipUnit.textContent = unit ? ' (' + unit + ')' : '';
+            tooltip.classList.add('visible');
+            moveTooltip(e);
+        }
+
+        function moveTooltip(e) {
+            var rect = mapContainer.getBoundingClientRect();
+            var x = e.clientX - rect.left + 15;
+            var y = e.clientY - rect.top - 10;
+
+            /* Не выходим за правый край */
+            if (x + 250 > rect.width) x = x - 270;
+            if (y + 80 > rect.height) y = y - 80;
+
+            tooltip.style.left = x + 'px';
+            tooltip.style.top  = y + 'px';
+        }
+
+        function hideTooltip() {
+            tooltip.classList.remove('visible');
+        }
+    }
+
+    /* ===================================================================
+       ПЕРЕКЛЮЧЕНИЕ ВКЛАДОК
+       =================================================================== */
+    tabControls.addEventListener('click', function (e) {
+        var btn = e.target.closest('.tab-btn');
+        if (!btn) return;
+
+        var key = btn.getAttribute('data-key');
+        if (!key || !DATASETS[key]) return;
+
+        currentKey = key;
+
+        /* Обновляем активную кнопку */
+        tabControls.querySelectorAll('.tab-btn').forEach(function (b) {
+            b.classList.toggle('active', b.getAttribute('data-key') === key);
+        });
+
+        /* Перерисовываем карту */
+        var svg = svgContainer.querySelector('svg');
+        if (svg) renderMap(svg);
+    });
+
+    /* ===================================================================
+       ЭКСПОРТ В PNG
+       =================================================================== */
+    var DATASET_NAMES = {
+        employment: 'Занятость',
+        shipment: 'Отгрузка',
+        budget: 'Бюджет',
+        localization: 'Локализация'
+    };
+
+    /**
+     * Применяет раскраску к клону SVG для указанного датасета.
+     * Возвращает клонированный SVG-элемент.
+     */
+    function colorizeSvgClone(svgEl, datasetKey) {
+        var ds = DATASETS[datasetKey];
+        var scaleMin = ds.scale[0];
+        var scaleMax = ds.scale[ds.scale.length - 1];
+        var clone = svgEl.cloneNode(true);
+
+        /* Добавляем новые регионы в клон */
+        clone.setAttribute('viewBox', '-80 -5 1085 480');
+        Object.keys(NEW_REGION_PATHS).forEach(function (id) {
+            if (!clone.querySelector('#' + id)) {
+                var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                path.setAttribute('id', id);
+                path.setAttribute('class', 'russia-region');
+                path.setAttribute('d', NEW_REGION_PATHS[id]);
+                var fp = clone.querySelector('path');
+                if (fp) fp.parentNode.insertBefore(path, fp);
+                else clone.appendChild(path);
+            }
+        });
+
+        var paths = clone.querySelectorAll('path.russia-region');
+        if (paths.length === 0) paths = clone.querySelectorAll('path');
+
+        paths.forEach(function (path) {
+            var id = path.getAttribute('id');
+            var name = ID_TO_NAME[id] || null;
+            var value = (name && ds.data.hasOwnProperty(name)) ? ds.data[name] : null;
+
+            if (!name || value === null) {
+                path.style.fill = '#d0d0d0';
+                return;
+            }
+            if (ALWAYS_WHITE.indexOf(name) !== -1) {
+                path.style.fill = '#FFFFFF';
+                return;
+            }
+            if (datasetKey === 'budget' && value === -0.5) {
+                path.style.fill = '#FFFFFF';
+                return;
+            }
+            path.style.fill = getColor(value, scaleMin, scaleMax);
+        });
+
+        return clone;
+    }
+
+    /**
+     * Создаёт PNG-изображение карты для одного датасета.
+     * Возвращает Promise с dataURL.
+     */
+    function renderToPng(datasetKey) {
+        return new Promise(function (resolve) {
+            var svgEl = svgContainer.querySelector('svg');
+            if (!svgEl) { resolve(null); return; }
+
+            var ds = DATASETS[datasetKey];
+            var clone = colorizeSvgClone(svgEl, datasetKey);
+
+            /* Фиксированные размеры для рендера */
+            var W = 1800, H = 1100;
+            clone.setAttribute('width', W);
+            clone.setAttribute('height', H);
+            clone.style.width = '';
+            clone.style.height = '';
+            clone.style.display = '';
+
+            /* Встраиваем стили регионов в SVG */
+            var svgStyle = document.createElementNS('http://www.w3.org/2000/svg', 'style');
+            svgStyle.textContent = 'path.russia-region { stroke: rgba(76,175,80,0.5); stroke-width: 0.4; }';
+            clone.insertBefore(svgStyle, clone.firstChild);
+
+            var serializer = new XMLSerializer();
+            var svgString = serializer.serializeToString(clone);
+            var svgBlob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+            var url = URL.createObjectURL(svgBlob);
+
+            var img = new Image();
+            img.onload = function () {
+                URL.revokeObjectURL(url);
+
+                /* Размеры холста: карта + заголовок сверху */
+                var topMargin = 80;
+                var canvas = document.createElement('canvas');
+                canvas.width = W;
+                canvas.height = topMargin + H;
+                var ctx = canvas.getContext('2d');
+
+                /* Фон */
+                ctx.fillStyle = '#16213e';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                /* Заголовок */
+                ctx.fillStyle = '#4caf50';
+                ctx.font = 'bold 28px Segoe UI, Tahoma, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(ds.title, W / 2, 40);
+
+                /* Подзаголовок */
+                ctx.fillStyle = '#aaa';
+                ctx.font = '16px Segoe UI, Tahoma, sans-serif';
+                ctx.fillText('Металлургия России', W / 2, 65);
+
+                /* Карта */
+                ctx.drawImage(img, 0, topMargin, W, H);
+
+                /* === ЛЕГЕНДА — оверлей в левом нижнем углу карты === */
+                var scale = ds.scale;
+                var scaleMin = scale[0];
+                var scaleMax = scale[scale.length - 1];
+                var unit = ds.unit;
+                var numRows = scale.length - 1;
+                var extraRow = (datasetKey === 'budget') ? 1 : 0;
+                var totalRows = numRows + extraRow;
+
+                var boxW = 220;
+                var rowH = 26;
+                var padX = 16, padY = 14;
+                var headerH = 30;
+                var boxH = padY + headerH + totalRows * rowH + padY;
+                var boxX = 24;
+                var boxY = topMargin + H - boxH - 24;
+
+                /* Полупрозрачный фон легенды */
+                ctx.fillStyle = 'rgba(22, 33, 62, 0.92)';
+                roundRect(ctx, boxX, boxY, boxW, boxH, 10);
+                ctx.fill();
+                ctx.strokeStyle = 'rgba(76, 175, 80, 0.5)';
+                ctx.lineWidth = 1.5;
+                roundRect(ctx, boxX, boxY, boxW, boxH, 10);
+                ctx.stroke();
+
+                /* Заголовок легенды */
+                ctx.textAlign = 'left';
+                ctx.font = 'bold 15px Segoe UI, Tahoma, sans-serif';
+                ctx.fillStyle = '#4caf50';
+                ctx.fillText('Легенда', boxX + padX, boxY + padY + 18);
+
+                /* Разделительная линия */
+                ctx.beginPath();
+                ctx.moveTo(boxX + padX, boxY + padY + headerH - 2);
+                ctx.lineTo(boxX + boxW - padX, boxY + padY + headerH - 2);
+                ctx.strokeStyle = 'rgba(76, 175, 80, 0.25)';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+
+                /* Строки легенды (порядок убывания) */
+                var ly = boxY + padY + headerH + 4;
+                for (var i = scale.length - 2; i >= 0; i--) {
+                    var from = scale[i];
+                    var to = scale[i + 1];
+                    var midVal = (from + to) / 2;
+                    var colorStr = getColor(midVal, scaleMin, scaleMax);
+                    var label = to + ' – ' + from + (unit ? ' ' + unit : '');
+
+                    /* Цветной квадрат */
+                    ctx.fillStyle = colorStr;
+                    roundRect(ctx, boxX + padX, ly + 2, 22, 16, 3);
+                    ctx.fill();
+                    ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+                    ctx.lineWidth = 0.5;
+                    roundRect(ctx, boxX + padX, ly + 2, 22, 16, 3);
+                    ctx.stroke();
+
+                    /* Текст */
+                    ctx.fillStyle = '#ddd';
+                    ctx.font = '14px Segoe UI, Tahoma, sans-serif';
+                    ctx.textAlign = 'left';
+                    ctx.fillText(label, boxX + padX + 32, ly + 16);
+
+                    ly += rowH;
+                }
+
+                /* Исключение -0.5 для бюджетной карты */
+                if (datasetKey === 'budget') {
+                    ctx.fillStyle = '#FFFFFF';
+                    roundRect(ctx, boxX + padX, ly + 2, 22, 16, 3);
+                    ctx.fill();
+                    ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+                    ctx.lineWidth = 0.5;
+                    roundRect(ctx, boxX + padX, ly + 2, 22, 16, 3);
+                    ctx.stroke();
+
+                    ctx.fillStyle = '#999';
+                    ctx.font = '13px Segoe UI, Tahoma, sans-serif';
+                    ctx.fillText('−0.5 (нет данных)', boxX + padX + 32, ly + 16);
+                }
+
+                resolve(canvas.toDataURL('image/png'));
+            };
+            img.onerror = function () {
+                URL.revokeObjectURL(url);
+                resolve(null);
+            };
+            img.src = url;
+        });
+    }
+
+    /**
+     * Вспомогательная функция: рисует скруглённый прямоугольник.
+     */
+    function roundRect(ctx, x, y, w, h, r) {
+        ctx.beginPath();
+        ctx.moveTo(x + r, y);
+        ctx.lineTo(x + w - r, y);
+        ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+        ctx.lineTo(x + w, y + h - r);
+        ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+        ctx.lineTo(x + r, y + h);
+        ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+        ctx.lineTo(x, y + r);
+        ctx.quadraticCurveTo(x, y, x + r, y);
+        ctx.closePath();
+    }
+
+    /**
+     * Скачивает один PNG-файл.
+     */
+    function downloadPng(dataUrl, filename) {
+        if (!dataUrl) return;
+        var a = document.createElement('a');
+        a.href = dataUrl;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+
+    /**
+     * Сохраняет текущую карту как PNG.
+     */
+    function saveCurrentPng() {
+        var btn = document.getElementById('btnSaveCurrent');
+        var origText = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<span class="btn-icon">&#9203;</span> Сохранение...';
+
+        renderToPng(currentKey).then(function (dataUrl) {
+            btn.disabled = false;
+            btn.innerHTML = origText;
+            if (dataUrl) {
+                var name = 'metallurgy_' + currentKey + '.png';
+                downloadPng(dataUrl, name);
+            }
+        });
+    }
+
+    /**
+     * Сохраняет все 4 карты как PNG (последовательно с задержкой).
+     */
+    function saveAllPng() {
+        var btn = document.getElementById('btnSaveAll');
+        var origText = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<span class="btn-icon">&#9203;</span> Сохранение (1/4)...';
+
+        var keys = Object.keys(DATASETS);
+        var idx = 0;
+
+        function next() {
+            if (idx >= keys.length) {
+                btn.disabled = false;
+                btn.innerHTML = origText;
+                return;
+            }
+            var key = keys[idx];
+            btn.innerHTML = '<span class="btn-icon">&#9203;</span> Сохранение (' + (idx + 1) + '/' + keys.length + ')...';
+
+            renderToPng(key).then(function (dataUrl) {
+                if (dataUrl) {
+                    var name = 'metallurgy_' + key + '.png';
+                    downloadPng(dataUrl, name);
+                }
+                idx++;
+                setTimeout(next, 600); /* Задержка между скачиваниями */
+            });
+        }
+
+        next();
+    }
+
+    /* ===================================================================
+       ИНИЦИАЛИЗАЦИЯ
+       =================================================================== */
+    loadMap(function (svg) {
+        injectNewRegions(svg);
+        loadingOverlay.classList.add('hidden');
+        renderMap(svg);
+        setupTooltips(svg);
+    });
+
+    /* Привязка кнопок */
+    document.getElementById('btnSaveCurrent').addEventListener('click', saveCurrentPng);
+    document.getElementById('btnSaveAll').addEventListener('click', saveAllPng);
+
+})();
+</script>
+
+</body>
+</html>
