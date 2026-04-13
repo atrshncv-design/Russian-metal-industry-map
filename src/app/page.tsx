@@ -62,16 +62,19 @@ interface MapData {
 }
 
 /* ─── Constants ─── */
-const COLOR_LEVELS = 7;
+const COLOR_LEVELS = 4;
 const BLUE_SHADES = [
-  "#eff6ff",
   "#dbeafe",
-  "#bfdbfe",
   "#93c5fd",
   "#60a5fa",
-  "#3b82f6",
   "#1d4ed8",
 ];
+const INDICATOR_SCALES: Record<string, number[]> = {
+  employment_2024: [0, 2, 4, 6, 8],
+  shipment_2025: [0, 10, 20, 30, 40],
+  localization_coeff: [0, 2, 4, 6, 8],
+  budget_2025: [0, 2, 4, 6, 8],
+};
 const NO_DATA_FILL = "#0f172a";
 const STROKE_COLOR = "#1e3a8a";
 const CITY_MARKER_REGION_BY_ID: Record<string, string> = {
@@ -80,11 +83,18 @@ const CITY_MARKER_REGION_BY_ID: Record<string, string> = {
   circle1: "город Москва",
 };
 
-function classifyValue(value: number | null, min: number, max: number): number {
+function classifyValue(value: number | null, scale: number[]): number {
   if (value === null || value === undefined) return 0;
-  if (max === min) return value > 0 ? 3 : 0;
-  const ratio = (value - min) / (max - min);
-  return Math.min(COLOR_LEVELS - 1, Math.floor(ratio * COLOR_LEVELS));
+  const bins = Math.max(1, scale.length - 1);
+  if (bins === 1) return 0;
+  if (value <= scale[0]) return 0;
+
+  for (let i = 0; i < bins; i++) {
+    if (value < scale[i + 1]) {
+      return Math.min(i, COLOR_LEVELS - 1);
+    }
+  }
+  return Math.min(bins - 1, COLOR_LEVELS - 1);
 }
 
 function formatNumber(num: number | null): string {
@@ -97,24 +107,42 @@ function formatNumber(num: number | null): string {
   return num.toFixed(4);
 }
 
-function formatPercent(num: number | null): string {
-  if (num === null || num === undefined) return "—";
-  return (num * 100).toFixed(2) + "%";
-}
-
 function isPercentColumn(label: string, key: string): boolean {
   const normalized = `${label} ${key}`.toLowerCase();
   return normalized.includes("доля") || normalized.includes("_share");
 }
 
+function normalizeValue(
+  value: number | null,
+  indicatorKey: string | undefined,
+  column: ColumnDef | null | undefined
+): number | null {
+  if (value === null || value === undefined) return null;
+  if (!column) return value;
+  if (isPercentColumn(column.label, column.key)) return value * 100;
+  if (indicatorKey === "localization_coeff" && column.key === "localization_coeff") {
+    return value * 100;
+  }
+  return value;
+}
+
 function formatColumnValue(
   value: number | null,
+  indicatorKey: string | undefined,
   column: ColumnDef | null | undefined
 ): string {
-  if (!column) return formatNumber(value);
-  return isPercentColumn(column.label, column.key)
-    ? formatPercent(value)
-    : formatNumber(value);
+  const normalized = normalizeValue(value, indicatorKey, column);
+  if (normalized === null) return "—";
+  if (column && isPercentColumn(column.label, column.key)) {
+    return `${normalized.toFixed(2)}%`;
+  }
+  if (column && indicatorKey === "localization_coeff" && column.key === "localization_coeff") {
+    return normalized.toLocaleString("ru-RU", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  }
+  return formatNumber(normalized);
 }
 
 /* ─── Component ─── */
@@ -167,28 +195,9 @@ export default function RussiaMapPage() {
     return currentIndicator?.columns || [];
   }, [currentIndicator]);
 
-  // Compute min/max for current column
-  const { minVal, maxVal, rangeValues } = useMemo(() => {
-    if (!mapData || !currentIndicator) {
-      return { minVal: 0, maxVal: 1, rangeValues: [0, 1] };
-    }
-    const values = Object.values(currentIndicator.data)
-      .map((r) => r[selectedColumn])
-      .filter((v) => v !== null && v !== undefined && isFinite(v)) as number[];
-
-    if (values.length === 0) {
-      return { minVal: 0, maxVal: 1, rangeValues: Array.from({ length: COLOR_LEVELS + 1 }, (_, i) => i) };
-    }
-
-    const min = Math.min(0, ...values);
-    const max = Math.max(...values);
-    const step = (max - min) / COLOR_LEVELS;
-    const ranges: number[] = [];
-    for (let i = 0; i <= COLOR_LEVELS; i++) {
-      ranges.push(min + step * i);
-    }
-    return { minVal: min, maxVal: max, rangeValues: ranges };
-  }, [mapData, currentIndicator, selectedColumn]);
+  const currentScale = useMemo(() => {
+    return INDICATOR_SCALES[selectedIndicator] || [0, 2, 4, 6, 8];
+  }, [selectedIndicator]);
 
   // Region data for tooltip
   const hoveredData = useMemo(() => {
@@ -228,13 +237,19 @@ export default function RussiaMapPage() {
         c.label.toLowerCase().includes("коэффициент")
       )?.key;
       const key = coeffKey || shareKey;
-      const val = key
+      const rawVal = key
         ? (selectedData[key] as number | null | undefined) ??
           ind.data[selectedRegion]?.[key]
         : null;
+      const keyColumn = key ? ind.columns.find((c) => c.key === key) : null;
+      const val = normalizeValue(
+        rawVal as number | null,
+        ind.key,
+        keyColumn || null
+      );
       return {
         name: ind.label.replace(/\d{4}/g, "").trim(),
-        value: val && typeof val === "number" ? val * 100 : null,
+        value: val && typeof val === "number" ? val : null,
         shortLabel: ind.label,
       };
     });
@@ -246,27 +261,14 @@ export default function RussiaMapPage() {
     const isPercent = selectedColumnDef
       ? isPercentColumn(selectedColumnDef.label, selectedColumnDef.key)
       : false;
-    const toDisplay = (value: number) => (isPercent ? value * 100 : value);
-    const boundaries = rangeValues.map((value, index) => {
-      const displayed = toDisplay(value);
-      if (index === 0) return Math.floor(displayed);
-      if (index === rangeValues.length - 1) return Math.ceil(displayed);
-      return Math.round(displayed);
-    });
-
-    for (let i = 1; i < boundaries.length; i++) {
-      if (boundaries[i] < boundaries[i - 1]) {
-        boundaries[i] = boundaries[i - 1];
-      }
-    }
-
-    return Array.from({ length: COLOR_LEVELS }).map((_, i) => ({
+    const bins = Math.max(1, currentScale.length - 1);
+    return Array.from({ length: bins }).map((_, i) => ({
       color: BLUE_SHADES[i],
-      from: boundaries[i],
-      to: boundaries[i + 1],
+      from: currentScale[i],
+      to: currentScale[i + 1],
       suffix: isPercent ? "%" : "",
     }));
-  }, [rangeValues, selectedColumnDef]);
+  }, [currentScale, selectedColumnDef]);
 
   // Reset pan/zoom on indicator change
   useEffect(() => {
@@ -491,11 +493,16 @@ export default function RussiaMapPage() {
       const region = shape.getAttribute("data-region");
       if (region === "unknown" || !region) return;
 
-      const value = currentIndicator.data[region]?.[selectedColumn];
-      const level = classifyValue(value, minVal, maxVal);
+      const rawValue = currentIndicator.data[region]?.[selectedColumn];
+      const normalizedValue = normalizeValue(
+        rawValue as number | null,
+        currentIndicator.key,
+        selectedColumnDef
+      );
+      const level = classifyValue(normalizedValue, currentScale);
 
       const fillColor =
-        value === null || value === undefined
+        normalizedValue === null || normalizedValue === undefined
           ? NO_DATA_FILL
           : BLUE_SHADES[level] || BLUE_SHADES[0];
 
@@ -525,8 +532,8 @@ export default function RussiaMapPage() {
     mapData,
     currentIndicator,
     selectedColumn,
-    minVal,
-    maxVal,
+    selectedColumnDef,
+    currentScale,
     selectedRegion,
   ]);
 
@@ -679,7 +686,7 @@ export default function RussiaMapPage() {
             />
 
             {/* Legend */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
+            <div className="absolute bottom-4 left-20 sm:left-24 md:left-28 z-10 pointer-events-none">
               <Card className="bg-card/90 backdrop-blur-sm border-border/50 py-3 px-4 shadow-lg">
                 <CardContent className="p-0">
                   <p className="text-xs text-muted-foreground mb-2 text-center font-medium">
@@ -763,7 +770,11 @@ export default function RussiaMapPage() {
                               {col.label}
                             </span>
                             <span className="font-medium text-foreground whitespace-nowrap">
-                              {formatColumnValue(val as number | null, col)}
+                              {formatColumnValue(
+                                val as number | null,
+                                currentIndicator.key,
+                                col
+                              )}
                             </span>
                           </div>
                         );
@@ -834,12 +845,12 @@ export default function RussiaMapPage() {
                               />
                               <YAxis
                                 tick={{ fontSize: 9, fill: "#94a3b8" }}
-                                tickFormatter={(v) => `${v.toFixed(1)}%`}
+                                tickFormatter={(v) => `${v.toFixed(1)}`}
                                 width={45}
                               />
                               <RechartsTooltip
                                 formatter={(value: number) => [
-                                  `${value.toFixed(2)}%`,
+                                  `${value.toFixed(2)}`,
                                   "Значение",
                                 ]}
                                 contentStyle={{
@@ -889,7 +900,11 @@ export default function RussiaMapPage() {
                                   {col.label}
                                 </span>
                                 <span className="font-medium text-foreground whitespace-nowrap">
-                                  {formatColumnValue(val as number | null, col)}
+                                  {formatColumnValue(
+                                    val as number | null,
+                                    ind.key,
+                                    col
+                                  )}
                                 </span>
                               </div>
                             );
@@ -925,7 +940,11 @@ export default function RussiaMapPage() {
               {`Все регионы (${regionsAlphabetical.length}):`}
             </span>
             {regionsAlphabetical.map((r) => {
-              const displayVal = formatColumnValue(r.value, selectedColumnDef);
+              const displayVal = formatColumnValue(
+                r.value,
+                currentIndicator?.key,
+                selectedColumnDef
+              );
               return (
                 <button
                   key={r.name}
