@@ -1,0 +1,3561 @@
+{
+  "indicators": [
+    {
+      "key": "budget_2025",
+      "label": "Вклад отрасли в бюджет 2025",
+      "columns": [
+        {
+          "key": "budget_total",
+          "label": "Доходы на бюджет, тыс.руб."
+        },
+        {
+          "key": "budget_metallurgy",
+          "label": "Доходы с металлургии, тыс.руб."
+        },
+        {
+          "key": "budget_share",
+          "label": "Доля"
+        }
+      ],
+      "data": {
+        "Вологодская область": {
+          "budget_total": 154282.99,
+          "budget_metallurgy": 10394.3,
+          "budget_share": 0.06737165257168012
+        },
+        "Челябинская область": {
+          "budget_total": 375630.6,
+          "budget_metallurgy": 22724.8,
+          "budget_share": 0.06049773367771422
+        },
+        "Свердловская область": {
+          "budget_total": 618488.64,
+          "budget_metallurgy": 30055.9,
+          "budget_share": 0.04859571875079226
+        },
+        "Красноярский край": {
+          "budget_total": 557991.12,
+          "budget_metallurgy": 25063.7,
+          "budget_share": 0.04491773990955268
+        },
+        "Мурманская область": {
+          "budget_total": 155559.86,
+          "budget_metallurgy": 6854.3,
+          "budget_share": 0.04406213788055608
+        },
+        "Липецкая область": {
+          "budget_total": 140247.22,
+          "budget_metallurgy": 5657.2,
+          "budget_share": 0.040337341446055046
+        },
+        "Кемеровская область": {
+          "budget_total": 261791.87,
+          "budget_metallurgy": 6559.9,
+          "budget_share": 0.02505769182213336
+        },
+        "Республика Хакасия": {
+          "budget_total": 64925.96,
+          "budget_metallurgy": 1585.7,
+          "budget_share": 0.024423204524045544
+        },
+        "Нижегородская область": {
+          "budget_total": 414356.45,
+          "budget_metallurgy": 9529.8,
+          "budget_share": 0.022999038629662936
+        },
+        "Тульская область": {
+          "budget_total": 193008.62,
+          "budget_metallurgy": 4060.8,
+          "budget_share": 0.021039474817238734
+        },
+        "Волгоградская область": {
+          "budget_total": 209286.46,
+          "budget_metallurgy": 3701.6,
+          "budget_share": 0.017686762918155335
+        },
+        "Республика Мордовия": {
+          "budget_total": 89080.01,
+          "budget_metallurgy": 1542.2,
+          "budget_share": 0.017312526121180276
+        },
+        "Белгородская область": {
+          "budget_total": 210793.72,
+          "budget_metallurgy": 3358.2,
+          "budget_share": 0.015931214649089167
+        },
+        "Иркутская область": {
+          "budget_total": 335658.74,
+          "budget_metallurgy": 4460.3,
+          "budget_share": 0.013288198603140799
+        },
+        "Томская область": {
+          "budget_total": 127475.27,
+          "budget_metallurgy": 1620.8,
+          "budget_share": 0.012714623000994624
+        },
+        "Забайкальский край": {
+          "budget_total": 191459.47,
+          "budget_metallurgy": 2357.2,
+          "budget_share": 0.012311744099155815
+        },
+        "Оренбургская область": {
+          "budget_total": 189549.62,
+          "budget_metallurgy": 2160.8,
+          "budget_share": 0.011399653557733327
+        },
+        "Кировская область": {
+          "budget_total": 130876.17,
+          "budget_metallurgy": 1418.6,
+          "budget_share": 0.010839253624246491
+        },
+        "Калужская область": {
+          "budget_total": 138686.3,
+          "budget_metallurgy": 1383.6,
+          "budget_share": 0.009976472081236575
+        },
+        "Пермский край": {
+          "budget_total": 322208.75,
+          "budget_metallurgy": 2853.8,
+          "budget_share": 0.008856991003503165
+        },
+        "Самарская область": {
+          "budget_total": 363391.27,
+          "budget_metallurgy": 2818,
+          "budget_share": 0.007754726743985896
+        },
+        "Хабаровский край": {
+          "budget_total": 268370.61,
+          "budget_metallurgy": 2055,
+          "budget_share": 0.007657321343793943
+        },
+        "Орловская область": {
+          "budget_total": 71886.04,
+          "budget_metallurgy": 517.1,
+          "budget_share": 0.007193329887138032
+        },
+        "Рязанская область": {
+          "budget_total": 145895.4,
+          "budget_metallurgy": 989.9,
+          "budget_share": 0.006784998019128773
+        },
+        "Костромская область": {
+          "budget_total": 70541.94,
+          "budget_metallurgy": 419.2,
+          "budget_share": 0.0059425640973299
+        },
+        "Ростовская область": {
+          "budget_total": 412989.96,
+          "budget_metallurgy": 2380.7,
+          "budget_share": 0.005764546915377797
+        },
+        "Новосибирская область": {
+          "budget_total": 377721.86,
+          "budget_metallurgy": 1894.9,
+          "budget_share": 0.005016654318074152
+        },
+        "Ульяновская область": {
+          "budget_total": 128866.11,
+          "budget_metallurgy": 645.7,
+          "budget_share": 0.005010626921228553
+        },
+        "Тамбовская область": {
+          "budget_total": 97255.54,
+          "budget_metallurgy": 455.3,
+          "budget_share": 0.004681481383991082
+        },
+        "Московская область": {
+          "budget_total": 1613643.11,
+          "budget_metallurgy": 7459.5,
+          "budget_share": 0.004622769405311686
+        },
+        "Смоленская область": {
+          "budget_total": 117407.64,
+          "budget_metallurgy": 496,
+          "budget_share": 0.004224597308999653
+        },
+        "Чувашская Республика": {
+          "budget_total": 135441.93,
+          "budget_metallurgy": 550,
+          "budget_share": 0.004060780882257068
+        },
+        "Удмуртская Республика": {
+          "budget_total": 182426.97,
+          "budget_metallurgy": 731.3,
+          "budget_share": 0.0040087274376151725
+        },
+        "Брянская область": {
+          "budget_total": 118092.45,
+          "budget_metallurgy": 446.2,
+          "budget_share": 0.0037783956552683937
+        },
+        "Саратовская область": {
+          "budget_total": 226626.24,
+          "budget_metallurgy": 836.1,
+          "budget_share": 0.0036893344742427005
+        },
+        "Ленинградская область": {
+          "budget_total": 358203.37,
+          "budget_metallurgy": 1316.1,
+          "budget_share": 0.0036741697879615143
+        },
+        "Омская область": {
+          "budget_total": 195552.99,
+          "budget_metallurgy": 570.1,
+          "budget_share": 0.002915322337950445
+        },
+        "Владимирская область": {
+          "budget_total": 155202.87,
+          "budget_metallurgy": 421.6,
+          "budget_share": 0.002716444612138938
+        },
+        "Воронежская область": {
+          "budget_total": 266180.92,
+          "budget_metallurgy": 721.6,
+          "budget_share": 0.0027109381093130195
+        },
+        "город Москва": {
+          "budget_total": 5520282.35,
+          "budget_metallurgy": 13266.2,
+          "budget_share": 0.0024031741782193443
+        },
+        "Тюменская область": {
+          "budget_total": 283786.57,
+          "budget_metallurgy": 680.7,
+          "budget_share": 0.002398633592844087
+        },
+        "Краснодарский край": {
+          "budget_total": 667232.25,
+          "budget_metallurgy": 1485.2,
+          "budget_share": 0.0022259115922529226
+        },
+        "Республика Северная Осетия-Алания": {
+          "budget_total": 62071.03,
+          "budget_metallurgy": 128.4,
+          "budget_share": 0.0020685978628033077
+        },
+        "Ивановская область": {
+          "budget_total": 96964.99,
+          "budget_metallurgy": 176.6,
+          "budget_share": 0.0018212759058707682
+        },
+        "Пензенская область": {
+          "budget_total": 121623.42,
+          "budget_metallurgy": 219,
+          "budget_share": 0.0018006400412025909
+        },
+        "Республика Татарстан": {
+          "budget_total": 724826.4,
+          "budget_metallurgy": 1294.8,
+          "budget_share": 0.0017863587750115062
+        },
+        "Республика Башкортостан": {
+          "budget_total": 397082.46,
+          "budget_metallurgy": 657.1,
+          "budget_share": 0.0016548200089220762
+        },
+        "Тверская область": {
+          "budget_total": 164880.56,
+          "budget_metallurgy": 265.8,
+          "budget_share": 0.0016120760385578508
+        },
+        "Республика Ингушетия": {
+          "budget_total": 38810.25,
+          "budget_metallurgy": 56.8,
+          "budget_share": 0.0014635308971212501
+        },
+        "Новгородская область": {
+          "budget_total": 75018.55,
+          "budget_metallurgy": 102,
+          "budget_share": 0.0013596637098424323
+        },
+        "Алтайский край": {
+          "budget_total": 239015.34,
+          "budget_metallurgy": 304.7,
+          "budget_share": 0.0012748135747270447
+        },
+        "Курганская область": {
+          "budget_total": 103799.67,
+          "budget_metallurgy": 124.7,
+          "budget_share": 0.0012013525669204923
+        },
+        "Ставропольский край": {
+          "budget_total": 246850.64,
+          "budget_metallurgy": 251.4,
+          "budget_share": 0.001018429605853969
+        },
+        "Астраханская область": {
+          "budget_total": 89869.24,
+          "budget_metallurgy": 91.3,
+          "budget_share": 0.0010159204639985828
+        },
+        "город Санкт-Петербург": {
+          "budget_total": 1412606.23,
+          "budget_metallurgy": 1351.6,
+          "budget_share": 0.0009568129966409676
+        },
+        "Приморский край": {
+          "budget_total": 304056.88,
+          "budget_metallurgy": 289.5,
+          "budget_share": 0.0009521244840767951
+        },
+        "Республика Саха (Якутия)": {
+          "budget_total": 387015.88,
+          "budget_metallurgy": 276.6,
+          "budget_share": 0.0007146993554889789
+        },
+        "Ямало-Ненецкий автономный округ": {
+          "budget_total": 344057.18,
+          "budget_metallurgy": 205.9,
+          "budget_share": 0.0005984470372046879
+        },
+        "Ярославская область": {
+          "budget_total": 150541.92,
+          "budget_metallurgy": 80.6,
+          "budget_share": 0.0005353990436683682
+        },
+        "Псковская область": {
+          "budget_total": 68391.98,
+          "budget_metallurgy": 35.7,
+          "budget_share": 0.0005219910287726719
+        },
+        "Республика Бурятия": {
+          "budget_total": 137253.56,
+          "budget_metallurgy": 68,
+          "budget_share": 0.0004954334153518496
+        },
+        "Калининградская область": {
+          "budget_total": 177761.06,
+          "budget_metallurgy": 70.7,
+          "budget_share": 0.000397724901055383
+        },
+        "Курская область": {
+          "budget_total": 275662.98,
+          "budget_metallurgy": 88.7,
+          "budget_share": 0.00032176972040279044
+        },
+        "Магаданская область": {
+          "budget_total": 104888.62,
+          "budget_metallurgy": 30.8,
+          "budget_share": 0.0002936448205725273
+        },
+        "Республика Адыгея": {
+          "budget_total": 53643.67,
+          "budget_metallurgy": 12.8,
+          "budget_share": 0.00023861156404847024
+        },
+        "Кабардино-Балкарская Республика": {
+          "budget_total": 76330.5,
+          "budget_metallurgy": 13.3,
+          "budget_share": 0.0001742422753682997
+        },
+        "Чукотский автономный округ": {
+          "budget_total": 73240.14,
+          "budget_metallurgy": 11.5,
+          "budget_share": 0.00015701772279517762
+        },
+        "Архангельская область": {
+          "budget_total": 160488.5,
+          "budget_metallurgy": 19.7,
+          "budget_share": 0.00012275022820949788
+        },
+        "Ханты-Мансийский автономный округ - Югра": {
+          "budget_total": 515027.47,
+          "budget_metallurgy": 43.2,
+          "budget_share": 8.38790210549352e-05
+        },
+        "Республика Алтай": {
+          "budget_total": 49202.65,
+          "budget_metallurgy": 3.8,
+          "budget_share": 7.723161252493513e-05
+        },
+        "Еврейская автономная область": {
+          "budget_total": 33489.95,
+          "budget_metallurgy": 2.3,
+          "budget_share": 6.867731961379458e-05
+        },
+        "Чеченская Республика": {
+          "budget_total": 176353.07,
+          "budget_metallurgy": 10.9,
+          "budget_share": 6.180782676479633e-05
+        },
+        "Камчатский край": {
+          "budget_total": 174310.5,
+          "budget_metallurgy": 7.1,
+          "budget_share": 4.073191230591387e-05
+        },
+        "Республика Крым": {
+          "budget_total": 301730.02,
+          "budget_metallurgy": 11.9,
+          "budget_share": 3.943923113782314e-05
+        },
+        "Амурская область": {
+          "budget_total": 163518.01,
+          "budget_metallurgy": 5.7,
+          "budget_share": 3.485854555103747e-05
+        },
+        "Республика Калмыкия": {
+          "budget_total": 40975.7,
+          "budget_metallurgy": 1.4,
+          "budget_share": 3.416659141881652e-05
+        },
+        "Сахалинская область": {
+          "budget_total": 235197.03,
+          "budget_metallurgy": 7.5,
+          "budget_share": 3.188815777138002e-05
+        },
+        "Республика Марий-Эл": {
+          "budget_total": 74270.66,
+          "budget_metallurgy": 2.1,
+          "budget_share": 2.8274960798786493e-05
+        },
+        "город Севастополь": {
+          "budget_total": 86217.5,
+          "budget_metallurgy": 1,
+          "budget_share": 1.1598573375474817e-05
+        },
+        "Республика Дагестан": {
+          "budget_total": 242254.25,
+          "budget_metallurgy": 2.1,
+          "budget_share": 8.668578569829013e-06
+        },
+        "Ненецкий автономный округ": {
+          "budget_total": 32534.45,
+          "budget_metallurgy": 0,
+          "budget_share": 0
+        },
+        "Карачаево-Черкесская Республика": {
+          "budget_total": 46639.59,
+          "budget_metallurgy": 0,
+          "budget_share": 0
+        },
+        "Республика Тыва": {
+          "budget_total": 74376.49,
+          "budget_metallurgy": 0,
+          "budget_share": 0
+        },
+        "Республика Коми": {
+          "budget_total": 125774.33,
+          "budget_metallurgy": -46.9,
+          "budget_share": -0.0003728900801936293
+        },
+        "Республика Карелия": {
+          "budget_total": 93080.2,
+          "budget_metallurgy": -485.8,
+          "budget_share": -0.00521915509420908
+        },
+        "Донецкая Народная Республика": {
+          "budget_total": 0,
+          "budget_metallurgy": 0,
+          "budget_share": 0
+        },
+        "Луганская Народная Республика": {
+          "budget_total": 0,
+          "budget_metallurgy": 0,
+          "budget_share": 0
+        },
+        "Запорожская область": {
+          "budget_total": 0,
+          "budget_metallurgy": 0,
+          "budget_share": 0
+        },
+        "Херсонская область": {
+          "budget_total": 0,
+          "budget_metallurgy": 0,
+          "budget_share": 0
+        }
+      }
+    },
+    {
+      "key": "employment_2024",
+      "label": "Занятость 2024",
+      "columns": [
+        {
+          "key": "employment_total",
+          "label": "Среднегодовая численность занятых в отрасли, чел."
+        },
+        {
+          "key": "employment_metallurgy",
+          "label": "Численность занятых в металлургии, чел."
+        },
+        {
+          "key": "employment_share",
+          "label": "Доля"
+        }
+      ],
+      "data": {
+        "Вологодская область": {
+          "employment_total": 499652,
+          "employment_metallurgy": 26930,
+          "employment_share": 0.053897512668817496
+        },
+        "Свердловская область": {
+          "employment_total": 2104530,
+          "employment_metallurgy": 105525,
+          "employment_share": 0.05014183689469858
+        },
+        "Липецкая область": {
+          "employment_total": 569624,
+          "employment_metallurgy": 28249,
+          "employment_share": 0.049592362681347694
+        },
+        "Челябинская область": {
+          "employment_total": 1805920,
+          "employment_metallurgy": 83930,
+          "employment_share": 0.04647492690706122
+        },
+        "Хабаровский край": {
+          "employment_total": 159675,
+          "employment_metallurgy": 6319,
+          "employment_share": 0.03957413496164083
+        },
+        "Красноярский край": {
+          "employment_total": 1445535,
+          "employment_metallurgy": 50552,
+          "employment_share": 0.03497113525442137
+        },
+        "Мурманская область": {
+          "employment_total": 315849,
+          "employment_metallurgy": 6942,
+          "employment_share": 0.02197885698545824
+        },
+        "Кемеровская область": {
+          "employment_total": 1153708,
+          "employment_metallurgy": 24657,
+          "employment_share": 0.021371958935883256
+        },
+        "Республика Хакасия": {
+          "employment_total": 246216,
+          "employment_metallurgy": 4663,
+          "employment_share": 0.018938655489488903
+        },
+        "Тульская область": {
+          "employment_total": 741866,
+          "employment_metallurgy": 13219,
+          "employment_share": 0.017818581792399167
+        },
+        "Оренбургская область": {
+          "employment_total": 866229,
+          "employment_metallurgy": 13854,
+          "employment_share": 0.015993461313347855
+        },
+        "Волгоградская область": {
+          "employment_total": 1169162,
+          "employment_metallurgy": 18180,
+          "employment_share": 0.015549598772454116
+        },
+        "Нижегородская область": {
+          "employment_total": 1628555,
+          "employment_metallurgy": 21631,
+          "employment_share": 0.01328232697084225
+        },
+        "Белгородская область": {
+          "employment_total": 772796,
+          "employment_metallurgy": 9477,
+          "employment_share": 0.012263262232206171
+        },
+        "Пермский край": {
+          "employment_total": 1129588,
+          "employment_metallurgy": 13325,
+          "employment_share": 0.011796336363346637
+        },
+        "Удмуртская Республика": {
+          "employment_total": 679205,
+          "employment_metallurgy": 7493,
+          "employment_share": 0.01103201537091158
+        },
+        "Забайкальский край": {
+          "employment_total": 268787,
+          "employment_metallurgy": 2496,
+          "employment_share": 0.009286163393318874
+        },
+        "Калужская область": {
+          "employment_total": 540366,
+          "employment_metallurgy": 4824,
+          "employment_share": 0.008927282619557855
+        },
+        "Иркутская область": {
+          "employment_total": 1102603,
+          "employment_metallurgy": 9654,
+          "employment_share": 0.008755644597375484
+        },
+        "Республика Мордовия": {
+          "employment_total": 366823,
+          "employment_metallurgy": 3092,
+          "employment_share": 0.008429133396760836
+        },
+        "Кировская область": {
+          "employment_total": 532412,
+          "employment_metallurgy": 4128,
+          "employment_share": 0.007753393988114468
+        },
+        "Томская область": {
+          "employment_total": 511155,
+          "employment_metallurgy": 3905,
+          "employment_share": 0.007639561385489724
+        },
+        "Рязанская область": {
+          "employment_total": 493284,
+          "employment_metallurgy": 3638,
+          "employment_share": 0.007375061830507375
+        },
+        "Брянская область": {
+          "employment_total": 510294,
+          "employment_metallurgy": 3573,
+          "employment_share": 0.007001845994661901
+        },
+        "Орловская область": {
+          "employment_total": 292263,
+          "employment_metallurgy": 1883,
+          "employment_share": 0.006442827179629306
+        },
+        "Ростовская область": {
+          "employment_total": 2134783,
+          "employment_metallurgy": 13543,
+          "employment_share": 0.0063439703239158264
+        },
+        "Костромская область": {
+          "employment_total": 254040,
+          "employment_metallurgy": 1427,
+          "employment_share": 0.005617225633758463
+        },
+        "Чувашская Республика": {
+          "employment_total": 509594,
+          "employment_metallurgy": 2706,
+          "employment_share": 0.0053101096166752355
+        },
+        "Ульяновская область": {
+          "employment_total": 556142,
+          "employment_metallurgy": 2840,
+          "employment_share": 0.005106609463050803
+        },
+        "Ленинградская область": {
+          "employment_total": 893667,
+          "employment_metallurgy": 4394,
+          "employment_share": 0.004916820247362832
+        },
+        "Московская область": {
+          "employment_total": 3979449,
+          "employment_metallurgy": 19325,
+          "employment_share": 0.004856199941248147
+        },
+        "Республика Алтай": {
+          "employment_total": 84064,
+          "employment_metallurgy": 408,
+          "employment_share": 0.0048534449942900645
+        },
+        "Владимирская область": {
+          "employment_total": 643465,
+          "employment_metallurgy": 2977,
+          "employment_share": 0.004626514262625007
+        },
+        "Алтайский край": {
+          "employment_total": 1069505,
+          "employment_metallurgy": 4769,
+          "employment_share": 0.004459072187600806
+        },
+        "Смоленская область": {
+          "employment_total": 401939,
+          "employment_metallurgy": 1736,
+          "employment_share": 0.004319063340457134
+        },
+        "Самарская область": {
+          "employment_total": 1626489,
+          "employment_metallurgy": 6887,
+          "employment_share": 0.004234273948363622
+        },
+        "Республика Башкортостан": {
+          "employment_total": 1728306,
+          "employment_metallurgy": 7140,
+          "employment_share": 0.004131212875497742
+        },
+        "Новосибирская область": {
+          "employment_total": 1313955,
+          "employment_metallurgy": 5241,
+          "employment_share": 0.003988721074922657
+        },
+        "Ивановская область": {
+          "employment_total": 427533,
+          "employment_metallurgy": 1666,
+          "employment_share": 0.0038967752196906436
+        },
+        "Воронежская область": {
+          "employment_total": 1173364,
+          "employment_metallurgy": 4064,
+          "employment_share": 0.0034635458391428404
+        },
+        "Краснодарский край": {
+          "employment_total": 2901263,
+          "employment_metallurgy": 9896,
+          "employment_share": 0.0034109282750305644
+        },
+        "Республика Северная Осетия-Алания": {
+          "employment_total": 275212,
+          "employment_metallurgy": 936,
+          "employment_share": 0.0034010144906472103
+        },
+        "Саратовская область": {
+          "employment_total": 1147924,
+          "employment_metallurgy": 3794,
+          "employment_share": 0.0033050968531017732
+        },
+        "Тамбовская область": {
+          "employment_total": 459324,
+          "employment_metallurgy": 1515,
+          "employment_share": 0.0032983253651017582
+        },
+        "Республика Коми": {
+          "employment_total": 341395,
+          "employment_metallurgy": 1081,
+          "employment_share": 0.0031664201291758814
+        },
+        "Республика Карелия": {
+          "employment_total": 231205,
+          "employment_metallurgy": 702,
+          "employment_share": 0.0030362665167275793
+        },
+        "Омская область": {
+          "employment_total": 831937,
+          "employment_metallurgy": 2497,
+          "employment_share": 0.0030014291947587377
+        },
+        "Республика Татарстан": {
+          "employment_total": 2051792,
+          "employment_metallurgy": 5968,
+          "employment_share": 0.0029086769029219336
+        },
+        "город Санкт-Петербург": {
+          "employment_total": 3417898,
+          "employment_metallurgy": 9717,
+          "employment_share": 0.0028429754193951954
+        },
+        "Пензенская область": {
+          "employment_total": 588816,
+          "employment_metallurgy": 1541,
+          "employment_share": 0.0026171163827069916
+        },
+        "Новгородская область": {
+          "employment_total": 272716,
+          "employment_metallurgy": 617,
+          "employment_share": 0.0022624268469763416
+        },
+        "Республика Бурятия": {
+          "employment_total": 373205,
+          "employment_metallurgy": 724,
+          "employment_share": 0.0019399525729826771
+        },
+        "Республика Тыва": {
+          "employment_total": 120336,
+          "employment_metallurgy": 213,
+          "employment_share": 0.0017700438771439968
+        },
+        "Тверская область": {
+          "employment_total": 592371,
+          "employment_metallurgy": 882,
+          "employment_share": 0.0014889317674227807
+        },
+        "Курганская область": {
+          "employment_total": 313870,
+          "employment_metallurgy": 451,
+          "employment_share": 0.0014369006276483895
+        },
+        "Еврейская автономная область": {
+          "employment_total": 64026,
+          "employment_metallurgy": 87,
+          "employment_share": 0.0013588229781651205
+        },
+        "Приморский край": {
+          "employment_total": 541114,
+          "employment_metallurgy": 724,
+          "employment_share": 0.0013379805364488813
+        },
+        "Калининградская область": {
+          "employment_total": 533322,
+          "employment_metallurgy": 692,
+          "employment_share": 0.0012975275724609148
+        },
+        "город Москва": {
+          "employment_total": 8509554,
+          "employment_metallurgy": 10676,
+          "employment_share": 0.001254589841018695
+        },
+        "Астраханская область": {
+          "employment_total": 484784,
+          "employment_metallurgy": 544,
+          "employment_share": 0.001122149245849698
+        },
+        "Тюменская область": {
+          "employment_total": 2272752,
+          "employment_metallurgy": 2326,
+          "employment_share": 0.0010234288650939477
+        },
+        "Курская область": {
+          "employment_total": 508088,
+          "employment_metallurgy": 501,
+          "employment_share": 0.0009860496606886996
+        },
+        "Псковская область": {
+          "employment_total": 285988,
+          "employment_metallurgy": 255,
+          "employment_share": 0.000891645803320419
+        },
+        "Ярославская область": {
+          "employment_total": 591956,
+          "employment_metallurgy": 510,
+          "employment_share": 0.0008615505206468048
+        },
+        "Ставропольский край": {
+          "employment_total": 1411026,
+          "employment_metallurgy": 1197,
+          "employment_share": 0.0008483188828554541
+        },
+        "Республика Ингушетия": {
+          "employment_total": 198303,
+          "employment_metallurgy": 142,
+          "employment_share": 0.0007160759040458289
+        },
+        "Республика Марий-Эл": {
+          "employment_total": 298998,
+          "employment_metallurgy": 197,
+          "employment_share": 0.0006588672833931999
+        },
+        "Республика Адыгея": {
+          "employment_total": 159011,
+          "employment_metallurgy": 86,
+          "employment_share": 0.000540843086327361
+        },
+        "Республика Крым": {
+          "employment_total": 913076,
+          "employment_metallurgy": 443,
+          "employment_share": 0.0004851731947833477
+        },
+        "Сахалинская область": {
+          "employment_total": 83033,
+          "employment_metallurgy": 37,
+          "employment_share": 0.00044560596389387353
+        },
+        "город Севастополь": {
+          "employment_total": 262219,
+          "employment_metallurgy": 106,
+          "employment_share": 0.00040424225551924153
+        },
+        "Архангельская область": {
+          "employment_total": 457186,
+          "employment_metallurgy": 155,
+          "employment_share": 0.0003390305039961854
+        },
+        "Ханты-Мансийский автономный округ - Югра": {
+          "employment_total": 1099101,
+          "employment_metallurgy": 281,
+          "employment_share": 0.00025566349225412407
+        },
+        "Магаданская область": {
+          "employment_total": 402117,
+          "employment_metallurgy": 79,
+          "employment_share": 0.00019646023421044124
+        },
+        "Республика Саха (Якутия)": {
+          "employment_total": 428173,
+          "employment_metallurgy": 84,
+          "employment_share": 0.0001961823842231995
+        },
+        "Республика Дагестан": {
+          "employment_total": 1268896,
+          "employment_metallurgy": 193,
+          "employment_share": 0.00015210072377878092
+        },
+        "Чеченская Республика": {
+          "employment_total": 575432,
+          "employment_metallurgy": 60,
+          "employment_share": 0.00010426948796730109
+        },
+        "Амурская область": {
+          "employment_total": 960319,
+          "employment_metallurgy": 70,
+          "employment_share": 7.289244511459214e-05
+        },
+        "Камчатский край": {
+          "employment_total": 696546,
+          "employment_metallurgy": 43,
+          "employment_share": 6.173318057960278e-05
+        },
+        "Кабардино-Балкарская Республика": {
+          "employment_total": 384645,
+          "employment_metallurgy": 15,
+          "employment_share": 3.89969972312132e-05
+        },
+        "Ямало-Ненецкий автономный округ": {
+          "employment_total": 411095,
+          "employment_metallurgy": 10,
+          "employment_share": 2.4325277612230748e-05
+        },
+        "Республика Калмыкия": {
+          "employment_total": 125898,
+          "employment_metallurgy": 1,
+          "employment_share": 7.942937933882985e-06
+        },
+        "Ненецкий автономный округ": {
+          "employment_total": 0,
+          "employment_metallurgy": 0,
+          "employment_share": 0
+        },
+        "Карачаево-Черкесская Республика": {
+          "employment_total": 195049,
+          "employment_metallurgy": 0,
+          "employment_share": 0
+        },
+        "Чукотский автономный округ": {
+          "employment_total": 34122,
+          "employment_metallurgy": 0,
+          "employment_share": 0
+        },
+        "Донецкая Народная Республика": {
+          "employment_total": 0,
+          "employment_metallurgy": 0,
+          "employment_share": 0
+        },
+        "Луганская Народная Республика": {
+          "employment_total": 0,
+          "employment_metallurgy": 0,
+          "employment_share": 0
+        },
+        "Запорожская область": {
+          "employment_total": 0,
+          "employment_metallurgy": 0,
+          "employment_share": 0
+        },
+        "Херсонская область": {
+          "employment_total": 0,
+          "employment_metallurgy": 0,
+          "employment_share": 0
+        }
+      }
+    },
+    {
+      "key": "shipment_2025",
+      "label": "Отгрузка товаров 2025",
+      "columns": [
+        {
+          "key": "shipment_metallurgy",
+          "label": "Отгружено товаров по металлургии, тыс.руб."
+        },
+        {
+          "key": "shipment_total",
+          "label": "Отгружено товаров по всем видам экономической деят-ти, тыс.руб."
+        },
+        {
+          "key": "shipment_share",
+          "label": "Доля"
+        }
+      ],
+      "data": {
+        "Мурманская область": {
+          "shipment_metallurgy": 548294.5,
+          "shipment_total": 1450954.5,
+          "shipment_share": 0.37788538510339226
+        },
+        "Липецкая область": {
+          "shipment_metallurgy": 626826.3,
+          "shipment_total": 1747927.4,
+          "shipment_share": 0.35861117572732143
+        },
+        "Красноярский край": {
+          "shipment_metallurgy": 1797862.9,
+          "shipment_total": 5473418,
+          "shipment_share": 0.32847169721004316
+        },
+        "Вологодская область": {
+          "shipment_metallurgy": 590148.1,
+          "shipment_total": 1823573.1,
+          "shipment_share": 0.32362184987264836
+        },
+        "Челябинская область": {
+          "shipment_metallurgy": 996160.7,
+          "shipment_total": 3937957.9,
+          "shipment_share": 0.2529637759712972
+        },
+        "Республика Хакасия": {
+          "shipment_metallurgy": 141513.9,
+          "shipment_total": 600006.7,
+          "shipment_share": 0.235853866298493
+        },
+        "Свердловская область": {
+          "shipment_metallurgy": 1611354.7,
+          "shipment_total": 6994807.2,
+          "shipment_share": 0.23036441947963912
+        },
+        "Республика Ингушетия": {
+          "shipment_metallurgy": 4303.4,
+          "shipment_total": 40086.9,
+          "shipment_share": 0.10735177826172639
+        },
+        "Кемеровская область": {
+          "shipment_metallurgy": 287889.1,
+          "shipment_total": 2981098.4,
+          "shipment_share": 0.09657148519485301
+        },
+        "Волгоградская область": {
+          "shipment_metallurgy": 149081.8,
+          "shipment_total": 1690158.6,
+          "shipment_share": 0.08820580506468445
+        },
+        "Иркутская область": {
+          "shipment_metallurgy": 287877.1,
+          "shipment_total": 3558892.9,
+          "shipment_share": 0.0808895092066412
+        },
+        "Оренбургская область": {
+          "shipment_metallurgy": 158000.9,
+          "shipment_total": 2160478.2,
+          "shipment_share": 0.07313237411976663
+        },
+        "Тульская область": {
+          "shipment_metallurgy": 173213.9,
+          "shipment_total": 2692957.7,
+          "shipment_share": 0.06432106230261248
+        },
+        "Белгородская область": {
+          "shipment_metallurgy": 142738.9,
+          "shipment_total": 2300385.9,
+          "shipment_share": 0.062049980396767346
+        },
+        "Хабаровский край": {
+          "shipment_metallurgy": 130599.1,
+          "shipment_total": 2127608.2,
+          "shipment_share": 0.061383059155346364
+        },
+        "Тамбовская область": {
+          "shipment_metallurgy": 38324.7,
+          "shipment_total": 719158.2,
+          "shipment_share": 0.05329105612645451
+        },
+        "Нижегородская область": {
+          "shipment_metallurgy": 197690.8,
+          "shipment_total": 4326321.4,
+          "shipment_share": 0.04569489451246039
+        },
+        "Саратовская область": {
+          "shipment_metallurgy": 59412.7,
+          "shipment_total": 1428497.5,
+          "shipment_share": 0.04159104233644091
+        },
+        "Орловская область": {
+          "shipment_metallurgy": 19921.5,
+          "shipment_total": 493289.1,
+          "shipment_share": 0.040385039928917954
+        },
+        "Самарская область": {
+          "shipment_metallurgy": 157595.9,
+          "shipment_total": 4074543.7,
+          "shipment_share": 0.03867817149684761
+        },
+        "Кировская область": {
+          "shipment_metallurgy": 36492.8,
+          "shipment_total": 947700.2,
+          "shipment_share": 0.03850669230627999
+        },
+        "Республика Мордовия": {
+          "shipment_metallurgy": 28562.2,
+          "shipment_total": 744828.6,
+          "shipment_share": 0.038347345953149495
+        },
+        "Калужская область": {
+          "shipment_metallurgy": 68329.6,
+          "shipment_total": 1825775.8,
+          "shipment_share": 0.03742496751244047
+        },
+        "Новгородская область": {
+          "shipment_metallurgy": 23454.9,
+          "shipment_total": 641749.8,
+          "shipment_share": 0.03654835576107698
+        },
+        "Ростовская область": {
+          "shipment_metallurgy": 111670.2,
+          "shipment_total": 3087046.3,
+          "shipment_share": 0.036173801474892034
+        },
+        "Удмуртская Республика": {
+          "shipment_metallurgy": 62973.8,
+          "shipment_total": 1828102.5,
+          "shipment_share": 0.03444763080844756
+        },
+        "Республика Коми": {
+          "shipment_metallurgy": 47320.5,
+          "shipment_total": 1379988.2,
+          "shipment_share": 0.03429051060001818
+        },
+        "Ивановская область": {
+          "shipment_metallurgy": 19504.9,
+          "shipment_total": 625664.4,
+          "shipment_share": 0.031174700046862184
+        },
+        "Краснодарский край": {
+          "shipment_metallurgy": 138857,
+          "shipment_total": 5036357.4,
+          "shipment_share": 0.027570918616697058
+        },
+        "Новосибирская область": {
+          "shipment_metallurgy": 80566.4,
+          "shipment_total": 2966361.8,
+          "shipment_share": 0.02716000455507484
+        },
+        "город Москва": {
+          "shipment_metallurgy": 1100729.9,
+          "shipment_total": 42792753.1,
+          "shipment_share": 0.025722343627383952
+        },
+        "Костромская область": {
+          "shipment_metallurgy": 12026.5,
+          "shipment_total": 477775.7,
+          "shipment_share": 0.02517185365434031
+        },
+        "Республика Северная Осетия-Алания": {
+          "shipment_metallurgy": 3597.2,
+          "shipment_total": 146199.1,
+          "shipment_share": 0.02460480262874395
+        },
+        "Рязанская область": {
+          "shipment_metallurgy": 27112.3,
+          "shipment_total": 1110713.7,
+          "shipment_share": 0.0244098006533997
+        },
+        "Пермский край": {
+          "shipment_metallurgy": 79814,
+          "shipment_total": 3298584.5,
+          "shipment_share": 0.02419643941211753
+        },
+        "Республика Алтай": {
+          "shipment_metallurgy": 1849,
+          "shipment_total": 77754.5,
+          "shipment_share": 0.023779974149406143
+        },
+        "Томская область": {
+          "shipment_metallurgy": 22831.1,
+          "shipment_total": 1147530.8,
+          "shipment_share": 0.019895849418595124
+        },
+        "Республика Бурятия": {
+          "shipment_metallurgy": 11379.3,
+          "shipment_total": 581113,
+          "shipment_share": 0.019581905756711687
+        },
+        "Смоленская область": {
+          "shipment_metallurgy": 18142.7,
+          "shipment_total": 958856,
+          "shipment_share": 0.018921193589026924
+        },
+        "Московская область": {
+          "shipment_metallurgy": 235972.5,
+          "shipment_total": 12922899.4,
+          "shipment_share": 0.018260027621974678
+        },
+        "Ульяновская область": {
+          "shipment_metallurgy": 15642,
+          "shipment_total": 972170.1,
+          "shipment_share": 0.016089776881638308
+        },
+        "Ставропольский край": {
+          "shipment_metallurgy": 22446.7,
+          "shipment_total": 1480271,
+          "shipment_share": 0.015163912553849938
+        },
+        "Тюменская область": {
+          "shipment_metallurgy": 31283.4,
+          "shipment_total": 2780859.4,
+          "shipment_share": 0.01124954393595016
+        },
+        "Брянская область": {
+          "shipment_metallurgy": 9326,
+          "shipment_total": 858013.5,
+          "shipment_share": 0.010869292849121838
+        },
+        "Воронежская область": {
+          "shipment_metallurgy": 24813.8,
+          "shipment_total": 2284561.7,
+          "shipment_share": 0.010861514486564314
+        },
+        "Чувашская Республика": {
+          "shipment_metallurgy": 9808.7,
+          "shipment_total": 974299.9,
+          "shipment_share": 0.010067434062140416
+        },
+        "Республика Башкортостан": {
+          "shipment_metallurgy": 36964,
+          "shipment_total": 3893669,
+          "shipment_share": 0.009493359605040901
+        },
+        "Владимирская область": {
+          "shipment_metallurgy": 12990.3,
+          "shipment_total": 1485107.4,
+          "shipment_share": 0.008747044153170336
+        },
+        "город Санкт-Петербург": {
+          "shipment_metallurgy": 115237.9,
+          "shipment_total": 13548460.3,
+          "shipment_share": 0.008505608567196376
+        },
+        "Республика Карелия": {
+          "shipment_metallurgy": 4329.4,
+          "shipment_total": 518730.1,
+          "shipment_share": 0.008346151495739307
+        },
+        "Ленинградская область": {
+          "shipment_metallurgy": 27648.8,
+          "shipment_total": 3522176.4,
+          "shipment_share": 0.007849919157938824
+        },
+        "Республика Татарстан": {
+          "shipment_metallurgy": 65309.8,
+          "shipment_total": 8677854.5,
+          "shipment_share": 0.007526030771776595
+        },
+        "Пензенская область": {
+          "shipment_metallurgy": 5682.9,
+          "shipment_total": 883964.2,
+          "shipment_share": 0.006428880264608001
+        },
+        "Алтайский край": {
+          "shipment_metallurgy": 8982.2,
+          "shipment_total": 1435568.8,
+          "shipment_share": 0.006256892738265139
+        },
+        "Курганская область": {
+          "shipment_metallurgy": 3900.9,
+          "shipment_total": 692886.3,
+          "shipment_share": 0.005629928027152507
+        },
+        "Омская область": {
+          "shipment_metallurgy": 13496.6,
+          "shipment_total": 2409826.9,
+          "shipment_share": 0.005600651233497311
+        },
+        "Приморский край": {
+          "shipment_metallurgy": 8375.3,
+          "shipment_total": 1994639.8,
+          "shipment_share": 0.004198903481220017
+        },
+        "Астраханская область": {
+          "shipment_metallurgy": 2704.5,
+          "shipment_total": 695214.6,
+          "shipment_share": 0.003890165712860461
+        },
+        "Тверская область": {
+          "shipment_metallurgy": 4638,
+          "shipment_total": 1197799.3,
+          "shipment_share": 0.0038721011107620447
+        },
+        "Республика Адыгея": {
+          "shipment_metallurgy": 890.8,
+          "shipment_total": 239117.8,
+          "shipment_share": 0.0037253604708641515
+        },
+        "Псковская область": {
+          "shipment_metallurgy": 779.4,
+          "shipment_total": 450144.8,
+          "shipment_share": 0.0017314428601641072
+        },
+        "Калининградская область": {
+          "shipment_metallurgy": 2005.4,
+          "shipment_total": 1194538.3,
+          "shipment_share": 0.0016788076196468543
+        },
+        "Ярославская область": {
+          "shipment_metallurgy": 1978.7,
+          "shipment_total": 1200624.5,
+          "shipment_share": 0.0016480589893009847
+        },
+        "Камчатский край": {
+          "shipment_metallurgy": 221.8,
+          "shipment_total": 526785.3,
+          "shipment_share": 0.0004210443989230527
+        },
+        "Республика Крым": {
+          "shipment_metallurgy": 281.5,
+          "shipment_total": 703185.9,
+          "shipment_share": 0.00040032088242952535
+        },
+        "Еврейская автономная область": {
+          "shipment_metallurgy": 37,
+          "shipment_total": 115503.4,
+          "shipment_share": 0.00032033689051577706
+        },
+        "город Севастополь": {
+          "shipment_metallurgy": 46.6,
+          "shipment_total": 159468.2,
+          "shipment_share": 0.0002922212704476504
+        },
+        "Забайкальский край": {
+          "shipment_metallurgy": 285.2,
+          "shipment_total": 1031349.3,
+          "shipment_share": 0.0002765309483411682
+        },
+        "Архангельская область": {
+          "shipment_metallurgy": 122.9,
+          "shipment_total": 798692.3,
+          "shipment_share": 0.00015387653042354358
+        },
+        "Республика Марий-Эл": {
+          "shipment_metallurgy": 40.5,
+          "shipment_total": 484554.6,
+          "shipment_share": 8.358191213126447e-05
+        },
+        "Сахалинская область": {
+          "shipment_metallurgy": 114.6,
+          "shipment_total": 1615042.5,
+          "shipment_share": 7.095788500921801e-05
+        },
+        "Амурская область": {
+          "shipment_metallurgy": 58.2,
+          "shipment_total": 1243539.8,
+          "shipment_share": 4.6801879602084306e-05
+        },
+        "Ханты-Мансийский автономный округ - Югра": {
+          "shipment_metallurgy": 371.7,
+          "shipment_total": 9646678,
+          "shipment_share": 3.853139909925468e-05
+        },
+        "Кабардино-Балкарская Республика": {
+          "shipment_metallurgy": 5.8,
+          "shipment_total": 176930.3,
+          "shipment_share": 3.278127036465772e-05
+        },
+        "Республика Саха (Якутия)": {
+          "shipment_metallurgy": 71.1,
+          "shipment_total": 2740704.2,
+          "shipment_share": 2.5942237765024035e-05
+        },
+        "Курская область": {
+          "shipment_metallurgy": 3.4,
+          "shipment_total": 1107974.8,
+          "shipment_share": 3.0686618504319773e-06
+        },
+        "Республика Дагестан": {
+          "shipment_metallurgy": 0.7,
+          "shipment_total": 613791.5,
+          "shipment_share": 1.140452417474012e-06
+        },
+        "Ненецкий автономный округ": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 512301.7,
+          "shipment_share": 0
+        },
+        "Карачаево-Черкесская Республика": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 126790,
+          "shipment_share": 0
+        },
+        "Чеченская Республика": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 309243.8,
+          "shipment_share": 0
+        },
+        "Республика Калмыкия": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 55449.7,
+          "shipment_share": 0
+        },
+        "Ямало-Ненецкий автономный округ": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 6232692.2,
+          "shipment_share": 0
+        },
+        "Республика Тыва": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 81441.5,
+          "shipment_share": 0
+        },
+        "Магаданская область": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 704412,
+          "shipment_share": 0
+        },
+        "Чукотский автономный округ": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 344457.9,
+          "shipment_share": 0
+        },
+        "Донецкая Народная Республика": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 0,
+          "shipment_share": 0
+        },
+        "Луганская Народная Республика": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 0,
+          "shipment_share": 0
+        },
+        "Запорожская область": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 0,
+          "shipment_share": 0
+        },
+        "Херсонская область": {
+          "shipment_metallurgy": 0,
+          "shipment_total": 0,
+          "shipment_share": 0
+        }
+      }
+    },
+    {
+      "key": "localization_coeff",
+      "label": "Коэффициент локализации",
+      "columns": [
+        {
+          "key": "loc_shipment_metallurgy",
+          "label": "Отгружено товаров по металлургии, тыс.руб."
+        },
+        {
+          "key": "loc_shipment_total",
+          "label": "Отгружено товаров по всем видам экономической деят-ти, тыс.руб."
+        },
+        {
+          "key": "loc_share",
+          "label": "Доля"
+        },
+        {
+          "key": "localization_coeff",
+          "label": "Коэффициент локализации"
+        }
+      ],
+      "data": {
+        "Мурманская область": {
+          "loc_shipment_metallurgy": 548294.5,
+          "loc_shipment_total": 1450954.5,
+          "loc_share": 0.37788538510339226,
+          "localization_coeff": 0.07634048183906914
+        },
+        "Липецкая область": {
+          "loc_shipment_metallurgy": 626826.3,
+          "loc_shipment_total": 1747927.4,
+          "loc_share": 0.35861117572732143,
+          "localization_coeff": 0.07244670216713564
+        },
+        "Красноярский край": {
+          "loc_shipment_metallurgy": 1797862.9,
+          "loc_shipment_total": 5473418,
+          "loc_share": 0.32847169721004316,
+          "localization_coeff": 0.06635791862829155
+        },
+        "Вологодская область": {
+          "loc_shipment_metallurgy": 590148.1,
+          "loc_shipment_total": 1823573.1,
+          "loc_share": 0.32362184987264836,
+          "localization_coeff": 0.06537815148942391
+        },
+        "Челябинская область": {
+          "loc_shipment_metallurgy": 996160.7,
+          "loc_shipment_total": 3937957.9,
+          "loc_share": 0.2529637759712972,
+          "localization_coeff": 0.051103793125514586
+        },
+        "Республика Хакасия": {
+          "loc_shipment_metallurgy": 141513.9,
+          "loc_shipment_total": 600006.7,
+          "loc_share": 0.235853866298493,
+          "localization_coeff": 0.04764724571686727
+        },
+        "Свердловская область": {
+          "loc_shipment_metallurgy": 1611354.7,
+          "loc_shipment_total": 6994807.2,
+          "loc_share": 0.23036441947963912,
+          "localization_coeff": 0.04653826656154326
+        },
+        "Республика Ингушетия": {
+          "loc_shipment_metallurgy": 4303.4,
+          "loc_shipment_total": 40086.9,
+          "loc_share": 0.10735177826172639,
+          "localization_coeff": 0.021687227931661897
+        },
+        "Кемеровская область": {
+          "loc_shipment_metallurgy": 287889.1,
+          "loc_shipment_total": 2981098.4,
+          "loc_share": 0.09657148519485301,
+          "localization_coeff": 0.019509390948455153
+        },
+        "Волгоградская область": {
+          "loc_shipment_metallurgy": 149081.8,
+          "loc_shipment_total": 1690158.6,
+          "loc_share": 0.08820580506468445,
+          "localization_coeff": 0.01781935455852211
+        },
+        "Иркутская область": {
+          "loc_shipment_metallurgy": 287877.1,
+          "loc_shipment_total": 3558892.9,
+          "loc_share": 0.0808895092066412,
+          "localization_coeff": 0.016341314991240648
+        },
+        "Оренбургская область": {
+          "loc_shipment_metallurgy": 158000.9,
+          "loc_shipment_total": 2160478.2,
+          "loc_share": 0.07313237411976663,
+          "localization_coeff": 0.014774216993892248
+        },
+        "Тульская область": {
+          "loc_shipment_metallurgy": 173213.9,
+          "loc_shipment_total": 2692957.7,
+          "loc_share": 0.06432106230261248,
+          "localization_coeff": 0.012994154000527773
+        },
+        "Белгородская область": {
+          "loc_shipment_metallurgy": 142738.9,
+          "loc_shipment_total": 2300385.9,
+          "loc_share": 0.062049980396767346,
+          "localization_coeff": 0.012535349575104514
+        },
+        "Хабаровский край": {
+          "loc_shipment_metallurgy": 130599.1,
+          "loc_shipment_total": 2127608.2,
+          "loc_share": 0.061383059155346364,
+          "localization_coeff": 0.012400618011181083
+        },
+        "Тамбовская область": {
+          "loc_shipment_metallurgy": 38324.7,
+          "loc_shipment_total": 719158.2,
+          "loc_share": 0.05329105612645451,
+          "localization_coeff": 0.010765869924536264
+        },
+        "Нижегородская область": {
+          "loc_shipment_metallurgy": 197690.8,
+          "loc_shipment_total": 4326321.4,
+          "loc_share": 0.04569489451246039,
+          "localization_coeff": 0.009231291820699069
+        },
+        "Саратовская область": {
+          "loc_shipment_metallurgy": 59412.7,
+          "loc_shipment_total": 1428497.5,
+          "loc_share": 0.04159104233644091,
+          "localization_coeff": 0.008402230775038568
+        },
+        "Орловская область": {
+          "loc_shipment_metallurgy": 19921.5,
+          "loc_shipment_total": 493289.1,
+          "loc_share": 0.040385039928917954,
+          "localization_coeff": 0.00815859392503393
+        },
+        "Самарская область": {
+          "loc_shipment_metallurgy": 157595.9,
+          "loc_shipment_total": 4074543.7,
+          "loc_share": 0.03867817149684761,
+          "localization_coeff": 0.007813772019565172
+        },
+        "Кировская область": {
+          "loc_shipment_metallurgy": 36492.8,
+          "loc_shipment_total": 947700.2,
+          "loc_share": 0.03850669230627999,
+          "localization_coeff": 0.007779129758844442
+        },
+        "Республика Мордовия": {
+          "loc_shipment_metallurgy": 28562.2,
+          "loc_shipment_total": 744828.6,
+          "loc_share": 0.038347345953149495,
+          "localization_coeff": 0.007746938576393837
+        },
+        "Калужская область": {
+          "loc_shipment_metallurgy": 68329.6,
+          "loc_shipment_total": 1825775.8,
+          "loc_share": 0.03742496751244047,
+          "localization_coeff": 0.007560599497462721
+        },
+        "Новгородская область": {
+          "loc_shipment_metallurgy": 23454.9,
+          "loc_shipment_total": 641749.8,
+          "loc_share": 0.03654835576107698,
+          "localization_coeff": 0.007383506214358985
+        },
+        "Ростовская область": {
+          "loc_shipment_metallurgy": 111670.2,
+          "loc_shipment_total": 3087046.3,
+          "loc_share": 0.036173801474892034,
+          "localization_coeff": 0.00730783868179637
+        },
+        "Удмуртская Республика": {
+          "loc_shipment_metallurgy": 62973.8,
+          "loc_shipment_total": 1828102.5,
+          "loc_share": 0.03444763080844756,
+          "localization_coeff": 0.006959117335039911
+        },
+        "Республика Коми": {
+          "loc_shipment_metallurgy": 47320.5,
+          "loc_shipment_total": 1379988.2,
+          "loc_share": 0.03429051060001818,
+          "localization_coeff": 0.00692737587879155
+        },
+        "Ивановская область": {
+          "loc_shipment_metallurgy": 19504.9,
+          "loc_shipment_total": 625664.4,
+          "loc_share": 0.031174700046862184,
+          "localization_coeff": 0.0062979192013863
+        },
+        "Краснодарский край": {
+          "loc_shipment_metallurgy": 138857,
+          "loc_shipment_total": 5036357.4,
+          "loc_share": 0.027570918616697058,
+          "localization_coeff": 0.005569882548827688
+        },
+        "Новосибирская область": {
+          "loc_shipment_metallurgy": 80566.4,
+          "loc_shipment_total": 2966361.8,
+          "loc_share": 0.02716000455507484,
+          "localization_coeff": 0.005486869607085825
+        },
+        "город Москва": {
+          "loc_shipment_metallurgy": 1100729.9,
+          "loc_shipment_total": 42792753.1,
+          "loc_share": 0.025722343627383952,
+          "localization_coeff": 0.005196433056037162
+        },
+        "Костромская область": {
+          "loc_shipment_metallurgy": 12026.5,
+          "loc_shipment_total": 477775.7,
+          "loc_share": 0.02517185365434031,
+          "localization_coeff": 0.005085222960472789
+        },
+        "Республика Северная Осетия-Алания": {
+          "loc_shipment_metallurgy": 3597.2,
+          "loc_shipment_total": 146199.1,
+          "loc_share": 0.02460480262874395,
+          "localization_coeff": 0.004970667197726051
+        },
+        "Рязанская область": {
+          "loc_shipment_metallurgy": 27112.3,
+          "loc_shipment_total": 1110713.7,
+          "loc_share": 0.0244098006533997,
+          "localization_coeff": 0.0049312728592726665
+        },
+        "Пермский край": {
+          "loc_shipment_metallurgy": 79814,
+          "loc_shipment_total": 3298584.5,
+          "loc_share": 0.02419643941211753,
+          "localization_coeff": 0.004888169578205562
+        },
+        "Республика Алтай": {
+          "loc_shipment_metallurgy": 1849,
+          "loc_shipment_total": 77754.5,
+          "loc_share": 0.023779974149406143,
+          "localization_coeff": 0.00480403518169821
+        },
+        "Томская область": {
+          "loc_shipment_metallurgy": 22831.1,
+          "loc_shipment_total": 1147530.8,
+          "loc_share": 0.019895849418595124,
+          "localization_coeff": 0.0040193635189081055
+        },
+        "Республика Бурятия": {
+          "loc_shipment_metallurgy": 11379.3,
+          "loc_shipment_total": 581113,
+          "loc_share": 0.019581905756711687,
+          "localization_coeff": 0.003955940556911452
+        },
+        "Смоленская область": {
+          "loc_shipment_metallurgy": 18142.7,
+          "loc_shipment_total": 958856,
+          "loc_share": 0.018921193589026924,
+          "localization_coeff": 0.0038224633513185705
+        },
+        "Московская область": {
+          "loc_shipment_metallurgy": 235972.5,
+          "loc_shipment_total": 12922899.4,
+          "loc_share": 0.018260027621974678,
+          "localization_coeff": 0.0036888944690857935
+        },
+        "Ульяновская область": {
+          "loc_shipment_metallurgy": 15642,
+          "loc_shipment_total": 972170.1,
+          "loc_share": 0.016089776881638308,
+          "localization_coeff": 0.003250459976088547
+        },
+        "Ставропольский край": {
+          "loc_shipment_metallurgy": 22446.7,
+          "loc_shipment_total": 1480271,
+          "loc_share": 0.015163912553849938,
+          "localization_coeff": 0.003063416677545442
+        },
+        "Тюменская область": {
+          "loc_shipment_metallurgy": 31283.4,
+          "loc_shipment_total": 2780859.4,
+          "loc_share": 0.01124954393595016,
+          "localization_coeff": 0.00227263513857579
+        },
+        "Брянская область": {
+          "loc_shipment_metallurgy": 9326,
+          "loc_shipment_total": 858013.5,
+          "loc_share": 0.010869292849121838,
+          "localization_coeff": 0.0021958167371963306
+        },
+        "Воронежская область": {
+          "loc_shipment_metallurgy": 24813.8,
+          "loc_shipment_total": 2284561.7,
+          "loc_share": 0.010861514486564314,
+          "localization_coeff": 0.0021942453508210736
+        },
+        "Чувашская Республика": {
+          "loc_shipment_metallurgy": 9808.7,
+          "loc_shipment_total": 974299.9,
+          "loc_share": 0.010067434062140416,
+          "localization_coeff": 0.00203382506305867
+        },
+        "Республика Башкортостан": {
+          "loc_shipment_metallurgy": 36964,
+          "loc_shipment_total": 3893669,
+          "loc_share": 0.009493359605040901,
+          "localization_coeff": 0.001917850425260788
+        },
+        "Владимирская область": {
+          "loc_shipment_metallurgy": 12990.3,
+          "loc_shipment_total": 1485107.4,
+          "loc_share": 0.008747044153170336,
+          "localization_coeff": 0.0017670796269030982
+        },
+        "город Санкт-Петербург": {
+          "loc_shipment_metallurgy": 115237.9,
+          "loc_shipment_total": 13548460.3,
+          "loc_share": 0.008505608567196376,
+          "localization_coeff": 0.0017183047610497728
+        },
+        "Республика Карелия": {
+          "loc_shipment_metallurgy": 4329.4,
+          "loc_shipment_total": 518730.1,
+          "loc_share": 0.008346151495739307,
+          "localization_coeff": 0.001686091211260466
+        },
+        "Ленинградская область": {
+          "loc_shipment_metallurgy": 27648.8,
+          "loc_shipment_total": 3522176.4,
+          "loc_share": 0.007849919157938824,
+          "localization_coeff": 0.0015858422541290553
+        },
+        "Республика Татарстан": {
+          "loc_shipment_metallurgy": 65309.8,
+          "loc_shipment_total": 8677854.5,
+          "loc_share": 0.007526030771776595,
+          "localization_coeff": 0.0015204102569245646
+        },
+        "Пензенская область": {
+          "loc_shipment_metallurgy": 5682.9,
+          "loc_shipment_total": 883964.2,
+          "loc_share": 0.006428880264608001,
+          "localization_coeff": 0.0012987636898197982
+        },
+        "Алтайский край": {
+          "loc_shipment_metallurgy": 8982.2,
+          "loc_shipment_total": 1435568.8,
+          "loc_share": 0.006256892738265139,
+          "localization_coeff": 0.0012640187350030584
+        },
+        "Курганская область": {
+          "loc_shipment_metallurgy": 3900.9,
+          "loc_shipment_total": 692886.3,
+          "loc_share": 0.005629928027152507,
+          "localization_coeff": 0.0011373591974045468
+        },
+        "Омская область": {
+          "loc_shipment_metallurgy": 13496.6,
+          "loc_shipment_total": 2409826.9,
+          "loc_share": 0.005600651233497311,
+          "localization_coeff": 0.0011314446936358203
+        },
+        "Приморский край": {
+          "loc_shipment_metallurgy": 8375.3,
+          "loc_shipment_total": 1994639.8,
+          "loc_share": 0.004198903481220017,
+          "localization_coeff": 0.0008482633295393974
+        },
+        "Астраханская область": {
+          "loc_shipment_metallurgy": 2704.5,
+          "loc_shipment_total": 695214.6,
+          "loc_share": 0.003890165712860461,
+          "localization_coeff": 0.0007858920632041335
+        },
+        "Тверская область": {
+          "loc_shipment_metallurgy": 4638,
+          "loc_shipment_total": 1197799.3,
+          "loc_share": 0.0038721011107620447,
+          "localization_coeff": 0.0007822426486387969
+        },
+        "Республика Адыгея": {
+          "loc_shipment_metallurgy": 890.8,
+          "loc_shipment_total": 239117.8,
+          "loc_share": 0.0037253604708641515,
+          "localization_coeff": 0.0007525980749220508
+        },
+        "Псковская область": {
+          "loc_shipment_metallurgy": 779.4,
+          "loc_shipment_total": 450144.8,
+          "loc_share": 0.0017314428601641072,
+          "localization_coeff": 0.0003497864363967893
+        },
+        "Калининградская область": {
+          "loc_shipment_metallurgy": 2005.4,
+          "loc_shipment_total": 1194538.3,
+          "loc_share": 0.0016788076196468543,
+          "localization_coeff": 0.000339153054474112
+        },
+        "Ярославская область": {
+          "loc_shipment_metallurgy": 1978.7,
+          "loc_shipment_total": 1200624.5,
+          "loc_share": 0.0016480589893009847,
+          "localization_coeff": 0.0003329412099597949
+        },
+        "Камчатский край": {
+          "loc_shipment_metallurgy": 221.8,
+          "loc_shipment_total": 526785.3,
+          "loc_share": 0.0004210443989230527,
+          "localization_coeff": 8.505947452990964e-05
+        },
+        "Республика Крым": {
+          "loc_shipment_metallurgy": 281.5,
+          "loc_shipment_total": 703185.9,
+          "loc_share": 0.00040032088242952535,
+          "localization_coeff": 8.087290554131825e-05
+        },
+        "Еврейская автономная область": {
+          "loc_shipment_metallurgy": 37,
+          "loc_shipment_total": 115503.4,
+          "loc_share": 0.00032033689051577706,
+          "localization_coeff": 6.471452333652062e-05
+        },
+        "город Севастополь": {
+          "loc_shipment_metallurgy": 46.6,
+          "loc_shipment_total": 159468.2,
+          "loc_share": 0.0002922212704476504,
+          "localization_coeff": 5.903460009043442e-05
+        },
+        "Забайкальский край": {
+          "loc_shipment_metallurgy": 285.2,
+          "loc_shipment_total": 1031349.3,
+          "loc_share": 0.0002765309483411682,
+          "localization_coeff": 5.586483804872085e-05
+        },
+        "Архангельская область": {
+          "loc_shipment_metallurgy": 122.9,
+          "loc_shipment_total": 798692.3,
+          "loc_share": 0.00015387653042354358,
+          "localization_coeff": 3.1086167762332035e-05
+        },
+        "Республика Марий-Эл": {
+          "loc_shipment_metallurgy": 40.5,
+          "loc_shipment_total": 484554.6,
+          "loc_share": 8.358191213126447e-05,
+          "localization_coeff": 1.688523477399282e-05
+        },
+        "Сахалинская область": {
+          "loc_shipment_metallurgy": 114.6,
+          "loc_shipment_total": 1615042.5,
+          "loc_share": 7.095788500921801e-05,
+          "localization_coeff": 1.4334926264488487e-05
+        },
+        "Амурская область": {
+          "loc_shipment_metallurgy": 58.2,
+          "loc_shipment_total": 1243539.8,
+          "loc_share": 4.6801879602084306e-05,
+          "localization_coeff": 9.454925172138244e-06
+        },
+        "Ханты-Мансийский автономный округ - Югра": {
+          "loc_shipment_metallurgy": 371.7,
+          "loc_shipment_total": 9646678,
+          "loc_share": 3.853139909925468e-05,
+          "localization_coeff": 7.784121030152462e-06
+        },
+        "Кабардино-Балкарская Республика": {
+          "loc_shipment_metallurgy": 5.8,
+          "loc_shipment_total": 176930.3,
+          "loc_share": 3.278127036465772e-05,
+          "localization_coeff": 6.622478861547014e-06
+        },
+        "Республика Саха (Якутия)": {
+          "loc_shipment_metallurgy": 71.1,
+          "loc_shipment_total": 2740704.2,
+          "loc_share": 2.5942237765024035e-05,
+          "localization_coeff": 5.24085611414627e-06
+        },
+        "Курская область": {
+          "loc_shipment_metallurgy": 3.4,
+          "loc_shipment_total": 1107974.8,
+          "loc_share": 3.0686618504319773e-06,
+          "localization_coeff": 6.19931686955955e-07
+        },
+        "Республика Дагестан": {
+          "loc_shipment_metallurgy": 0.7,
+          "loc_shipment_total": 613791.5,
+          "loc_share": 1.140452417474012e-06,
+          "localization_coeff": 2.3039442777252764e-07
+        },
+        "Ненецкий автономный округ": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 512301.7,
+          "loc_share": 0,
+          "localization_coeff": 0
+        },
+        "Карачаево-Черкесская Республика": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 126790,
+          "loc_share": 0,
+          "localization_coeff": 0
+        },
+        "Чеченская Республика": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 309243.8,
+          "loc_share": 0,
+          "localization_coeff": 0
+        },
+        "Республика Калмыкия": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 55449.7,
+          "loc_share": 0,
+          "localization_coeff": 0
+        },
+        "Ямало-Ненецкий автономный округ": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 6232692.2,
+          "loc_share": 0,
+          "localization_coeff": 0
+        },
+        "Республика Тыва": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 81441.5,
+          "loc_share": 0,
+          "localization_coeff": 0
+        },
+        "Магаданская область": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 704412,
+          "loc_share": 0,
+          "localization_coeff": 0
+        },
+        "Чукотский автономный округ": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 344457.9,
+          "loc_share": 0,
+          "localization_coeff": 0
+        },
+        "Донецкая Народная Республика": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 0,
+          "loc_share": 0,
+          "localization_coeff": 0
+        },
+        "Луганская Народная Республика": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 0,
+          "loc_share": 0,
+          "localization_coeff": 0
+        },
+        "Запорожская область": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 0,
+          "loc_share": 0,
+          "localization_coeff": 0
+        },
+        "Херсонская область": {
+          "loc_shipment_metallurgy": 0,
+          "loc_shipment_total": 0,
+          "loc_share": 0,
+          "localization_coeff": 0
+        }
+      }
+    }
+  ],
+  "regions": {
+    "Вологодская область": {
+      "name": "Вологодская область",
+      "svgId": "Vologodskaya",
+      "onMap": true,
+      "budget_total": 154282.99,
+      "budget_metallurgy": 10394.3,
+      "budget_share": 0.06737165257168012,
+      "employment_total": 499652,
+      "employment_metallurgy": 26930,
+      "employment_share": 0.053897512668817496,
+      "shipment_metallurgy": 590148.1,
+      "shipment_total": 1823573.1,
+      "shipment_share": 0.32362184987264836,
+      "loc_shipment_metallurgy": 590148.1,
+      "loc_shipment_total": 1823573.1,
+      "loc_share": 0.32362184987264836,
+      "localization_coeff": 0.06537815148942391
+    },
+    "Челябинская область": {
+      "name": "Челябинская область",
+      "svgId": "Chelyabinskaya",
+      "onMap": true,
+      "budget_total": 375630.6,
+      "budget_metallurgy": 22724.8,
+      "budget_share": 0.06049773367771422,
+      "employment_total": 1805920,
+      "employment_metallurgy": 83930,
+      "employment_share": 0.04647492690706122,
+      "shipment_metallurgy": 996160.7,
+      "shipment_total": 3937957.9,
+      "shipment_share": 0.2529637759712972,
+      "loc_shipment_metallurgy": 996160.7,
+      "loc_shipment_total": 3937957.9,
+      "loc_share": 0.2529637759712972,
+      "localization_coeff": 0.051103793125514586
+    },
+    "Свердловская область": {
+      "name": "Свердловская область",
+      "svgId": "Sverdlovskaya",
+      "onMap": true,
+      "budget_total": 618488.64,
+      "budget_metallurgy": 30055.9,
+      "budget_share": 0.04859571875079226,
+      "employment_total": 2104530,
+      "employment_metallurgy": 105525,
+      "employment_share": 0.05014183689469858,
+      "shipment_metallurgy": 1611354.7,
+      "shipment_total": 6994807.2,
+      "shipment_share": 0.23036441947963912,
+      "loc_shipment_metallurgy": 1611354.7,
+      "loc_shipment_total": 6994807.2,
+      "loc_share": 0.23036441947963912,
+      "localization_coeff": 0.04653826656154326
+    },
+    "Красноярский край": {
+      "name": "Красноярский край",
+      "svgId": "Krasnoyarskij",
+      "onMap": true,
+      "budget_total": 557991.12,
+      "budget_metallurgy": 25063.7,
+      "budget_share": 0.04491773990955268,
+      "employment_total": 1445535,
+      "employment_metallurgy": 50552,
+      "employment_share": 0.03497113525442137,
+      "shipment_metallurgy": 1797862.9,
+      "shipment_total": 5473418,
+      "shipment_share": 0.32847169721004316,
+      "loc_shipment_metallurgy": 1797862.9,
+      "loc_shipment_total": 5473418,
+      "loc_share": 0.32847169721004316,
+      "localization_coeff": 0.06635791862829155
+    },
+    "Мурманская область": {
+      "name": "Мурманская область",
+      "svgId": "Murmanskaya",
+      "onMap": true,
+      "budget_total": 155559.86,
+      "budget_metallurgy": 6854.3,
+      "budget_share": 0.04406213788055608,
+      "employment_total": 315849,
+      "employment_metallurgy": 6942,
+      "employment_share": 0.02197885698545824,
+      "shipment_metallurgy": 548294.5,
+      "shipment_total": 1450954.5,
+      "shipment_share": 0.37788538510339226,
+      "loc_shipment_metallurgy": 548294.5,
+      "loc_shipment_total": 1450954.5,
+      "loc_share": 0.37788538510339226,
+      "localization_coeff": 0.07634048183906914
+    },
+    "Липецкая область": {
+      "name": "Липецкая область",
+      "svgId": "Lipetskaya",
+      "onMap": true,
+      "budget_total": 140247.22,
+      "budget_metallurgy": 5657.2,
+      "budget_share": 0.040337341446055046,
+      "employment_total": 569624,
+      "employment_metallurgy": 28249,
+      "employment_share": 0.049592362681347694,
+      "shipment_metallurgy": 626826.3,
+      "shipment_total": 1747927.4,
+      "shipment_share": 0.35861117572732143,
+      "loc_shipment_metallurgy": 626826.3,
+      "loc_shipment_total": 1747927.4,
+      "loc_share": 0.35861117572732143,
+      "localization_coeff": 0.07244670216713564
+    },
+    "Кемеровская область": {
+      "name": "Кемеровская область",
+      "svgId": "Kemerovskaya",
+      "onMap": true,
+      "budget_total": 261791.87,
+      "budget_metallurgy": 6559.9,
+      "budget_share": 0.02505769182213336,
+      "employment_total": 1153708,
+      "employment_metallurgy": 24657,
+      "employment_share": 0.021371958935883256,
+      "shipment_metallurgy": 287889.1,
+      "shipment_total": 2981098.4,
+      "shipment_share": 0.09657148519485301,
+      "loc_shipment_metallurgy": 287889.1,
+      "loc_shipment_total": 2981098.4,
+      "loc_share": 0.09657148519485301,
+      "localization_coeff": 0.019509390948455153
+    },
+    "Республика Хакасия": {
+      "name": "Республика Хакасия",
+      "svgId": "Hakasiya",
+      "onMap": true,
+      "budget_total": 64925.96,
+      "budget_metallurgy": 1585.7,
+      "budget_share": 0.024423204524045544,
+      "employment_total": 246216,
+      "employment_metallurgy": 4663,
+      "employment_share": 0.018938655489488903,
+      "shipment_metallurgy": 141513.9,
+      "shipment_total": 600006.7,
+      "shipment_share": 0.235853866298493,
+      "loc_shipment_metallurgy": 141513.9,
+      "loc_shipment_total": 600006.7,
+      "loc_share": 0.235853866298493,
+      "localization_coeff": 0.04764724571686727
+    },
+    "Нижегородская область": {
+      "name": "Нижегородская область",
+      "svgId": "Nizhegorodskaya",
+      "onMap": true,
+      "budget_total": 414356.45,
+      "budget_metallurgy": 9529.8,
+      "budget_share": 0.022999038629662936,
+      "employment_total": 1628555,
+      "employment_metallurgy": 21631,
+      "employment_share": 0.01328232697084225,
+      "shipment_metallurgy": 197690.8,
+      "shipment_total": 4326321.4,
+      "shipment_share": 0.04569489451246039,
+      "loc_shipment_metallurgy": 197690.8,
+      "loc_shipment_total": 4326321.4,
+      "loc_share": 0.04569489451246039,
+      "localization_coeff": 0.009231291820699069
+    },
+    "Тульская область": {
+      "name": "Тульская область",
+      "svgId": "Tulskaya",
+      "onMap": true,
+      "budget_total": 193008.62,
+      "budget_metallurgy": 4060.8,
+      "budget_share": 0.021039474817238734,
+      "employment_total": 741866,
+      "employment_metallurgy": 13219,
+      "employment_share": 0.017818581792399167,
+      "shipment_metallurgy": 173213.9,
+      "shipment_total": 2692957.7,
+      "shipment_share": 0.06432106230261248,
+      "loc_shipment_metallurgy": 173213.9,
+      "loc_shipment_total": 2692957.7,
+      "loc_share": 0.06432106230261248,
+      "localization_coeff": 0.012994154000527773
+    },
+    "Волгоградская область": {
+      "name": "Волгоградская область",
+      "svgId": "Volgogradskaya",
+      "onMap": true,
+      "budget_total": 209286.46,
+      "budget_metallurgy": 3701.6,
+      "budget_share": 0.017686762918155335,
+      "employment_total": 1169162,
+      "employment_metallurgy": 18180,
+      "employment_share": 0.015549598772454116,
+      "shipment_metallurgy": 149081.8,
+      "shipment_total": 1690158.6,
+      "shipment_share": 0.08820580506468445,
+      "loc_shipment_metallurgy": 149081.8,
+      "loc_shipment_total": 1690158.6,
+      "loc_share": 0.08820580506468445,
+      "localization_coeff": 0.01781935455852211
+    },
+    "Республика Мордовия": {
+      "name": "Республика Мордовия",
+      "svgId": "Mordoviya",
+      "onMap": true,
+      "budget_total": 89080.01,
+      "budget_metallurgy": 1542.2,
+      "budget_share": 0.017312526121180276,
+      "employment_total": 366823,
+      "employment_metallurgy": 3092,
+      "employment_share": 0.008429133396760836,
+      "shipment_metallurgy": 28562.2,
+      "shipment_total": 744828.6,
+      "shipment_share": 0.038347345953149495,
+      "loc_shipment_metallurgy": 28562.2,
+      "loc_shipment_total": 744828.6,
+      "loc_share": 0.038347345953149495,
+      "localization_coeff": 0.007746938576393837
+    },
+    "Белгородская область": {
+      "name": "Белгородская область",
+      "svgId": "Belgorodskaya",
+      "onMap": true,
+      "budget_total": 210793.72,
+      "budget_metallurgy": 3358.2,
+      "budget_share": 0.015931214649089167,
+      "employment_total": 772796,
+      "employment_metallurgy": 9477,
+      "employment_share": 0.012263262232206171,
+      "shipment_metallurgy": 142738.9,
+      "shipment_total": 2300385.9,
+      "shipment_share": 0.062049980396767346,
+      "loc_shipment_metallurgy": 142738.9,
+      "loc_shipment_total": 2300385.9,
+      "loc_share": 0.062049980396767346,
+      "localization_coeff": 0.012535349575104514
+    },
+    "Иркутская область": {
+      "name": "Иркутская область",
+      "svgId": "Irkutskaya",
+      "onMap": true,
+      "budget_total": 335658.74,
+      "budget_metallurgy": 4460.3,
+      "budget_share": 0.013288198603140799,
+      "employment_total": 1102603,
+      "employment_metallurgy": 9654,
+      "employment_share": 0.008755644597375484,
+      "shipment_metallurgy": 287877.1,
+      "shipment_total": 3558892.9,
+      "shipment_share": 0.0808895092066412,
+      "loc_shipment_metallurgy": 287877.1,
+      "loc_shipment_total": 3558892.9,
+      "loc_share": 0.0808895092066412,
+      "localization_coeff": 0.016341314991240648
+    },
+    "Томская область": {
+      "name": "Томская область",
+      "svgId": "Tomskaya",
+      "onMap": true,
+      "budget_total": 127475.27,
+      "budget_metallurgy": 1620.8,
+      "budget_share": 0.012714623000994624,
+      "employment_total": 511155,
+      "employment_metallurgy": 3905,
+      "employment_share": 0.007639561385489724,
+      "shipment_metallurgy": 22831.1,
+      "shipment_total": 1147530.8,
+      "shipment_share": 0.019895849418595124,
+      "loc_shipment_metallurgy": 22831.1,
+      "loc_shipment_total": 1147530.8,
+      "loc_share": 0.019895849418595124,
+      "localization_coeff": 0.0040193635189081055
+    },
+    "Забайкальский край": {
+      "name": "Забайкальский край",
+      "svgId": "Zabaykalskij",
+      "onMap": true,
+      "budget_total": 191459.47,
+      "budget_metallurgy": 2357.2,
+      "budget_share": 0.012311744099155815,
+      "employment_total": 268787,
+      "employment_metallurgy": 2496,
+      "employment_share": 0.009286163393318874,
+      "shipment_metallurgy": 285.2,
+      "shipment_total": 1031349.3,
+      "shipment_share": 0.0002765309483411682,
+      "loc_shipment_metallurgy": 285.2,
+      "loc_shipment_total": 1031349.3,
+      "loc_share": 0.0002765309483411682,
+      "localization_coeff": 5.586483804872085e-05
+    },
+    "Оренбургская область": {
+      "name": "Оренбургская область",
+      "svgId": "Orenburgskaya",
+      "onMap": true,
+      "budget_total": 189549.62,
+      "budget_metallurgy": 2160.8,
+      "budget_share": 0.011399653557733327,
+      "employment_total": 866229,
+      "employment_metallurgy": 13854,
+      "employment_share": 0.015993461313347855,
+      "shipment_metallurgy": 158000.9,
+      "shipment_total": 2160478.2,
+      "shipment_share": 0.07313237411976663,
+      "loc_shipment_metallurgy": 158000.9,
+      "loc_shipment_total": 2160478.2,
+      "loc_share": 0.07313237411976663,
+      "localization_coeff": 0.014774216993892248
+    },
+    "Кировская область": {
+      "name": "Кировская область",
+      "svgId": "Kirovskaya",
+      "onMap": true,
+      "budget_total": 130876.17,
+      "budget_metallurgy": 1418.6,
+      "budget_share": 0.010839253624246491,
+      "employment_total": 532412,
+      "employment_metallurgy": 4128,
+      "employment_share": 0.007753393988114468,
+      "shipment_metallurgy": 36492.8,
+      "shipment_total": 947700.2,
+      "shipment_share": 0.03850669230627999,
+      "loc_shipment_metallurgy": 36492.8,
+      "loc_shipment_total": 947700.2,
+      "loc_share": 0.03850669230627999,
+      "localization_coeff": 0.007779129758844442
+    },
+    "Калужская область": {
+      "name": "Калужская область",
+      "svgId": "Kaluzhskaya",
+      "onMap": true,
+      "budget_total": 138686.3,
+      "budget_metallurgy": 1383.6,
+      "budget_share": 0.009976472081236575,
+      "employment_total": 540366,
+      "employment_metallurgy": 4824,
+      "employment_share": 0.008927282619557855,
+      "shipment_metallurgy": 68329.6,
+      "shipment_total": 1825775.8,
+      "shipment_share": 0.03742496751244047,
+      "loc_shipment_metallurgy": 68329.6,
+      "loc_shipment_total": 1825775.8,
+      "loc_share": 0.03742496751244047,
+      "localization_coeff": 0.007560599497462721
+    },
+    "Пермский край": {
+      "name": "Пермский край",
+      "svgId": "Permskij",
+      "onMap": true,
+      "budget_total": 322208.75,
+      "budget_metallurgy": 2853.8,
+      "budget_share": 0.008856991003503165,
+      "employment_total": 1129588,
+      "employment_metallurgy": 13325,
+      "employment_share": 0.011796336363346637,
+      "shipment_metallurgy": 79814,
+      "shipment_total": 3298584.5,
+      "shipment_share": 0.02419643941211753,
+      "loc_shipment_metallurgy": 79814,
+      "loc_shipment_total": 3298584.5,
+      "loc_share": 0.02419643941211753,
+      "localization_coeff": 0.004888169578205562
+    },
+    "Самарская область": {
+      "name": "Самарская область",
+      "svgId": "Samarskaya",
+      "onMap": true,
+      "budget_total": 363391.27,
+      "budget_metallurgy": 2818,
+      "budget_share": 0.007754726743985896,
+      "employment_total": 1626489,
+      "employment_metallurgy": 6887,
+      "employment_share": 0.004234273948363622,
+      "shipment_metallurgy": 157595.9,
+      "shipment_total": 4074543.7,
+      "shipment_share": 0.03867817149684761,
+      "loc_shipment_metallurgy": 157595.9,
+      "loc_shipment_total": 4074543.7,
+      "loc_share": 0.03867817149684761,
+      "localization_coeff": 0.007813772019565172
+    },
+    "Хабаровский край": {
+      "name": "Хабаровский край",
+      "svgId": "Habarovskij",
+      "onMap": true,
+      "budget_total": 268370.61,
+      "budget_metallurgy": 2055,
+      "budget_share": 0.007657321343793943,
+      "employment_total": 159675,
+      "employment_metallurgy": 6319,
+      "employment_share": 0.03957413496164083,
+      "shipment_metallurgy": 130599.1,
+      "shipment_total": 2127608.2,
+      "shipment_share": 0.061383059155346364,
+      "loc_shipment_metallurgy": 130599.1,
+      "loc_shipment_total": 2127608.2,
+      "loc_share": 0.061383059155346364,
+      "localization_coeff": 0.012400618011181083
+    },
+    "Орловская область": {
+      "name": "Орловская область",
+      "svgId": "Orlovskaya",
+      "onMap": true,
+      "budget_total": 71886.04,
+      "budget_metallurgy": 517.1,
+      "budget_share": 0.007193329887138032,
+      "employment_total": 292263,
+      "employment_metallurgy": 1883,
+      "employment_share": 0.006442827179629306,
+      "shipment_metallurgy": 19921.5,
+      "shipment_total": 493289.1,
+      "shipment_share": 0.040385039928917954,
+      "loc_shipment_metallurgy": 19921.5,
+      "loc_shipment_total": 493289.1,
+      "loc_share": 0.040385039928917954,
+      "localization_coeff": 0.00815859392503393
+    },
+    "Рязанская область": {
+      "name": "Рязанская область",
+      "svgId": "Ryazanskaya",
+      "onMap": true,
+      "budget_total": 145895.4,
+      "budget_metallurgy": 989.9,
+      "budget_share": 0.006784998019128773,
+      "employment_total": 493284,
+      "employment_metallurgy": 3638,
+      "employment_share": 0.007375061830507375,
+      "shipment_metallurgy": 27112.3,
+      "shipment_total": 1110713.7,
+      "shipment_share": 0.0244098006533997,
+      "loc_shipment_metallurgy": 27112.3,
+      "loc_shipment_total": 1110713.7,
+      "loc_share": 0.0244098006533997,
+      "localization_coeff": 0.0049312728592726665
+    },
+    "Костромская область": {
+      "name": "Костромская область",
+      "svgId": "Kostromskaya",
+      "onMap": true,
+      "budget_total": 70541.94,
+      "budget_metallurgy": 419.2,
+      "budget_share": 0.0059425640973299,
+      "employment_total": 254040,
+      "employment_metallurgy": 1427,
+      "employment_share": 0.005617225633758463,
+      "shipment_metallurgy": 12026.5,
+      "shipment_total": 477775.7,
+      "shipment_share": 0.02517185365434031,
+      "loc_shipment_metallurgy": 12026.5,
+      "loc_shipment_total": 477775.7,
+      "loc_share": 0.02517185365434031,
+      "localization_coeff": 0.005085222960472789
+    },
+    "Ростовская область": {
+      "name": "Ростовская область",
+      "svgId": "Rostovskaya",
+      "onMap": true,
+      "budget_total": 412989.96,
+      "budget_metallurgy": 2380.7,
+      "budget_share": 0.005764546915377797,
+      "employment_total": 2134783,
+      "employment_metallurgy": 13543,
+      "employment_share": 0.0063439703239158264,
+      "shipment_metallurgy": 111670.2,
+      "shipment_total": 3087046.3,
+      "shipment_share": 0.036173801474892034,
+      "loc_shipment_metallurgy": 111670.2,
+      "loc_shipment_total": 3087046.3,
+      "loc_share": 0.036173801474892034,
+      "localization_coeff": 0.00730783868179637
+    },
+    "Новосибирская область": {
+      "name": "Новосибирская область",
+      "svgId": "Novosibirskaya",
+      "onMap": true,
+      "budget_total": 377721.86,
+      "budget_metallurgy": 1894.9,
+      "budget_share": 0.005016654318074152,
+      "employment_total": 1313955,
+      "employment_metallurgy": 5241,
+      "employment_share": 0.003988721074922657,
+      "shipment_metallurgy": 80566.4,
+      "shipment_total": 2966361.8,
+      "shipment_share": 0.02716000455507484,
+      "loc_shipment_metallurgy": 80566.4,
+      "loc_shipment_total": 2966361.8,
+      "loc_share": 0.02716000455507484,
+      "localization_coeff": 0.005486869607085825
+    },
+    "Ульяновская область": {
+      "name": "Ульяновская область",
+      "svgId": "Ulyanovskaya",
+      "onMap": true,
+      "budget_total": 128866.11,
+      "budget_metallurgy": 645.7,
+      "budget_share": 0.005010626921228553,
+      "employment_total": 556142,
+      "employment_metallurgy": 2840,
+      "employment_share": 0.005106609463050803,
+      "shipment_metallurgy": 15642,
+      "shipment_total": 972170.1,
+      "shipment_share": 0.016089776881638308,
+      "loc_shipment_metallurgy": 15642,
+      "loc_shipment_total": 972170.1,
+      "loc_share": 0.016089776881638308,
+      "localization_coeff": 0.003250459976088547
+    },
+    "Тамбовская область": {
+      "name": "Тамбовская область",
+      "svgId": "Tambovskaya",
+      "onMap": true,
+      "budget_total": 97255.54,
+      "budget_metallurgy": 455.3,
+      "budget_share": 0.004681481383991082,
+      "employment_total": 459324,
+      "employment_metallurgy": 1515,
+      "employment_share": 0.0032983253651017582,
+      "shipment_metallurgy": 38324.7,
+      "shipment_total": 719158.2,
+      "shipment_share": 0.05329105612645451,
+      "loc_shipment_metallurgy": 38324.7,
+      "loc_shipment_total": 719158.2,
+      "loc_share": 0.05329105612645451,
+      "localization_coeff": 0.010765869924536264
+    },
+    "Московская область": {
+      "name": "Московская область",
+      "svgId": "Moskovskaya",
+      "onMap": true,
+      "budget_total": 1613643.11,
+      "budget_metallurgy": 7459.5,
+      "budget_share": 0.004622769405311686,
+      "employment_total": 3979449,
+      "employment_metallurgy": 19325,
+      "employment_share": 0.004856199941248147,
+      "shipment_metallurgy": 235972.5,
+      "shipment_total": 12922899.4,
+      "shipment_share": 0.018260027621974678,
+      "loc_shipment_metallurgy": 235972.5,
+      "loc_shipment_total": 12922899.4,
+      "loc_share": 0.018260027621974678,
+      "localization_coeff": 0.0036888944690857935
+    },
+    "Смоленская область": {
+      "name": "Смоленская область",
+      "svgId": "Smolenskaya",
+      "onMap": true,
+      "budget_total": 117407.64,
+      "budget_metallurgy": 496,
+      "budget_share": 0.004224597308999653,
+      "employment_total": 401939,
+      "employment_metallurgy": 1736,
+      "employment_share": 0.004319063340457134,
+      "shipment_metallurgy": 18142.7,
+      "shipment_total": 958856,
+      "shipment_share": 0.018921193589026924,
+      "loc_shipment_metallurgy": 18142.7,
+      "loc_shipment_total": 958856,
+      "loc_share": 0.018921193589026924,
+      "localization_coeff": 0.0038224633513185705
+    },
+    "Чувашская Республика": {
+      "name": "Чувашская Республика",
+      "svgId": "Chuvashia",
+      "onMap": true,
+      "budget_total": 135441.93,
+      "budget_metallurgy": 550,
+      "budget_share": 0.004060780882257068,
+      "employment_total": 509594,
+      "employment_metallurgy": 2706,
+      "employment_share": 0.0053101096166752355,
+      "shipment_metallurgy": 9808.7,
+      "shipment_total": 974299.9,
+      "shipment_share": 0.010067434062140416,
+      "loc_shipment_metallurgy": 9808.7,
+      "loc_shipment_total": 974299.9,
+      "loc_share": 0.010067434062140416,
+      "localization_coeff": 0.00203382506305867
+    },
+    "Удмуртская Республика": {
+      "name": "Удмуртская Республика",
+      "svgId": "Udmurtiya",
+      "onMap": true,
+      "budget_total": 182426.97,
+      "budget_metallurgy": 731.3,
+      "budget_share": 0.0040087274376151725,
+      "employment_total": 679205,
+      "employment_metallurgy": 7493,
+      "employment_share": 0.01103201537091158,
+      "shipment_metallurgy": 62973.8,
+      "shipment_total": 1828102.5,
+      "shipment_share": 0.03444763080844756,
+      "loc_shipment_metallurgy": 62973.8,
+      "loc_shipment_total": 1828102.5,
+      "loc_share": 0.03444763080844756,
+      "localization_coeff": 0.006959117335039911
+    },
+    "Брянская область": {
+      "name": "Брянская область",
+      "svgId": "Bryanskaya",
+      "onMap": true,
+      "budget_total": 118092.45,
+      "budget_metallurgy": 446.2,
+      "budget_share": 0.0037783956552683937,
+      "employment_total": 510294,
+      "employment_metallurgy": 3573,
+      "employment_share": 0.007001845994661901,
+      "shipment_metallurgy": 9326,
+      "shipment_total": 858013.5,
+      "shipment_share": 0.010869292849121838,
+      "loc_shipment_metallurgy": 9326,
+      "loc_shipment_total": 858013.5,
+      "loc_share": 0.010869292849121838,
+      "localization_coeff": 0.0021958167371963306
+    },
+    "Саратовская область": {
+      "name": "Саратовская область",
+      "svgId": "Saratovskaya",
+      "onMap": true,
+      "budget_total": 226626.24,
+      "budget_metallurgy": 836.1,
+      "budget_share": 0.0036893344742427005,
+      "employment_total": 1147924,
+      "employment_metallurgy": 3794,
+      "employment_share": 0.0033050968531017732,
+      "shipment_metallurgy": 59412.7,
+      "shipment_total": 1428497.5,
+      "shipment_share": 0.04159104233644091,
+      "loc_shipment_metallurgy": 59412.7,
+      "loc_shipment_total": 1428497.5,
+      "loc_share": 0.04159104233644091,
+      "localization_coeff": 0.008402230775038568
+    },
+    "Ленинградская область": {
+      "name": "Ленинградская область",
+      "svgId": "Leningradskaya",
+      "onMap": true,
+      "budget_total": 358203.37,
+      "budget_metallurgy": 1316.1,
+      "budget_share": 0.0036741697879615143,
+      "employment_total": 893667,
+      "employment_metallurgy": 4394,
+      "employment_share": 0.004916820247362832,
+      "shipment_metallurgy": 27648.8,
+      "shipment_total": 3522176.4,
+      "shipment_share": 0.007849919157938824,
+      "loc_shipment_metallurgy": 27648.8,
+      "loc_shipment_total": 3522176.4,
+      "loc_share": 0.007849919157938824,
+      "localization_coeff": 0.0015858422541290553
+    },
+    "Омская область": {
+      "name": "Омская область",
+      "svgId": "Omskaya",
+      "onMap": true,
+      "budget_total": 195552.99,
+      "budget_metallurgy": 570.1,
+      "budget_share": 0.002915322337950445,
+      "employment_total": 831937,
+      "employment_metallurgy": 2497,
+      "employment_share": 0.0030014291947587377,
+      "shipment_metallurgy": 13496.6,
+      "shipment_total": 2409826.9,
+      "shipment_share": 0.005600651233497311,
+      "loc_shipment_metallurgy": 13496.6,
+      "loc_shipment_total": 2409826.9,
+      "loc_share": 0.005600651233497311,
+      "localization_coeff": 0.0011314446936358203
+    },
+    "Владимирская область": {
+      "name": "Владимирская область",
+      "svgId": "Vladimirskaya",
+      "onMap": true,
+      "budget_total": 155202.87,
+      "budget_metallurgy": 421.6,
+      "budget_share": 0.002716444612138938,
+      "employment_total": 643465,
+      "employment_metallurgy": 2977,
+      "employment_share": 0.004626514262625007,
+      "shipment_metallurgy": 12990.3,
+      "shipment_total": 1485107.4,
+      "shipment_share": 0.008747044153170336,
+      "loc_shipment_metallurgy": 12990.3,
+      "loc_shipment_total": 1485107.4,
+      "loc_share": 0.008747044153170336,
+      "localization_coeff": 0.0017670796269030982
+    },
+    "Воронежская область": {
+      "name": "Воронежская область",
+      "svgId": "Voronezhskaya",
+      "onMap": true,
+      "budget_total": 266180.92,
+      "budget_metallurgy": 721.6,
+      "budget_share": 0.0027109381093130195,
+      "employment_total": 1173364,
+      "employment_metallurgy": 4064,
+      "employment_share": 0.0034635458391428404,
+      "shipment_metallurgy": 24813.8,
+      "shipment_total": 2284561.7,
+      "shipment_share": 0.010861514486564314,
+      "loc_shipment_metallurgy": 24813.8,
+      "loc_shipment_total": 2284561.7,
+      "loc_share": 0.010861514486564314,
+      "localization_coeff": 0.0021942453508210736
+    },
+    "город Москва": {
+      "name": "город Москва",
+      "svgId": "city-moscow",
+      "onMap": true,
+      "budget_total": 5520282.35,
+      "budget_metallurgy": 13266.2,
+      "budget_share": 0.0024031741782193443,
+      "employment_total": 8509554,
+      "employment_metallurgy": 10676,
+      "employment_share": 0.001254589841018695,
+      "shipment_metallurgy": 1100729.9,
+      "shipment_total": 42792753.1,
+      "shipment_share": 0.025722343627383952,
+      "loc_shipment_metallurgy": 1100729.9,
+      "loc_shipment_total": 42792753.1,
+      "loc_share": 0.025722343627383952,
+      "localization_coeff": 0.005196433056037162
+    },
+    "Тюменская область": {
+      "name": "Тюменская область",
+      "svgId": "Tumenskaya",
+      "onMap": true,
+      "budget_total": 283786.57,
+      "budget_metallurgy": 680.7,
+      "budget_share": 0.002398633592844087,
+      "employment_total": 2272752,
+      "employment_metallurgy": 2326,
+      "employment_share": 0.0010234288650939477,
+      "shipment_metallurgy": 31283.4,
+      "shipment_total": 2780859.4,
+      "shipment_share": 0.01124954393595016,
+      "loc_shipment_metallurgy": 31283.4,
+      "loc_shipment_total": 2780859.4,
+      "loc_share": 0.01124954393595016,
+      "localization_coeff": 0.00227263513857579
+    },
+    "Краснодарский край": {
+      "name": "Краснодарский край",
+      "svgId": "Krasnodarskij",
+      "onMap": true,
+      "budget_total": 667232.25,
+      "budget_metallurgy": 1485.2,
+      "budget_share": 0.0022259115922529226,
+      "employment_total": 2901263,
+      "employment_metallurgy": 9896,
+      "employment_share": 0.0034109282750305644,
+      "shipment_metallurgy": 138857,
+      "shipment_total": 5036357.4,
+      "shipment_share": 0.027570918616697058,
+      "loc_shipment_metallurgy": 138857,
+      "loc_shipment_total": 5036357.4,
+      "loc_share": 0.027570918616697058,
+      "localization_coeff": 0.005569882548827688
+    },
+    "Республика Северная Осетия-Алания": {
+      "name": "Республика Северная Осетия-Алания",
+      "svgId": "Severnaya_Osetiya",
+      "onMap": true,
+      "budget_total": 62071.03,
+      "budget_metallurgy": 128.4,
+      "budget_share": 0.0020685978628033077,
+      "employment_total": 275212,
+      "employment_metallurgy": 936,
+      "employment_share": 0.0034010144906472103,
+      "shipment_metallurgy": 3597.2,
+      "shipment_total": 146199.1,
+      "shipment_share": 0.02460480262874395,
+      "loc_shipment_metallurgy": 3597.2,
+      "loc_shipment_total": 146199.1,
+      "loc_share": 0.02460480262874395,
+      "localization_coeff": 0.004970667197726051
+    },
+    "Ивановская область": {
+      "name": "Ивановская область",
+      "svgId": "Ivanovskaya",
+      "onMap": true,
+      "budget_total": 96964.99,
+      "budget_metallurgy": 176.6,
+      "budget_share": 0.0018212759058707682,
+      "employment_total": 427533,
+      "employment_metallurgy": 1666,
+      "employment_share": 0.0038967752196906436,
+      "shipment_metallurgy": 19504.9,
+      "shipment_total": 625664.4,
+      "shipment_share": 0.031174700046862184,
+      "loc_shipment_metallurgy": 19504.9,
+      "loc_shipment_total": 625664.4,
+      "loc_share": 0.031174700046862184,
+      "localization_coeff": 0.0062979192013863
+    },
+    "Пензенская область": {
+      "name": "Пензенская область",
+      "svgId": "Penzenskaya",
+      "onMap": true,
+      "budget_total": 121623.42,
+      "budget_metallurgy": 219,
+      "budget_share": 0.0018006400412025909,
+      "employment_total": 588816,
+      "employment_metallurgy": 1541,
+      "employment_share": 0.0026171163827069916,
+      "shipment_metallurgy": 5682.9,
+      "shipment_total": 883964.2,
+      "shipment_share": 0.006428880264608001,
+      "loc_shipment_metallurgy": 5682.9,
+      "loc_shipment_total": 883964.2,
+      "loc_share": 0.006428880264608001,
+      "localization_coeff": 0.0012987636898197982
+    },
+    "Республика Татарстан": {
+      "name": "Республика Татарстан",
+      "svgId": "Tatarstan",
+      "onMap": true,
+      "budget_total": 724826.4,
+      "budget_metallurgy": 1294.8,
+      "budget_share": 0.0017863587750115062,
+      "employment_total": 2051792,
+      "employment_metallurgy": 5968,
+      "employment_share": 0.0029086769029219336,
+      "shipment_metallurgy": 65309.8,
+      "shipment_total": 8677854.5,
+      "shipment_share": 0.007526030771776595,
+      "loc_shipment_metallurgy": 65309.8,
+      "loc_shipment_total": 8677854.5,
+      "loc_share": 0.007526030771776595,
+      "localization_coeff": 0.0015204102569245646
+    },
+    "Республика Башкортостан": {
+      "name": "Республика Башкортостан",
+      "svgId": "Bashkortostan",
+      "onMap": true,
+      "budget_total": 397082.46,
+      "budget_metallurgy": 657.1,
+      "budget_share": 0.0016548200089220762,
+      "employment_total": 1728306,
+      "employment_metallurgy": 7140,
+      "employment_share": 0.004131212875497742,
+      "shipment_metallurgy": 36964,
+      "shipment_total": 3893669,
+      "shipment_share": 0.009493359605040901,
+      "loc_shipment_metallurgy": 36964,
+      "loc_shipment_total": 3893669,
+      "loc_share": 0.009493359605040901,
+      "localization_coeff": 0.001917850425260788
+    },
+    "Тверская область": {
+      "name": "Тверская область",
+      "svgId": "Tverskaya",
+      "onMap": true,
+      "budget_total": 164880.56,
+      "budget_metallurgy": 265.8,
+      "budget_share": 0.0016120760385578508,
+      "employment_total": 592371,
+      "employment_metallurgy": 882,
+      "employment_share": 0.0014889317674227807,
+      "shipment_metallurgy": 4638,
+      "shipment_total": 1197799.3,
+      "shipment_share": 0.0038721011107620447,
+      "loc_shipment_metallurgy": 4638,
+      "loc_shipment_total": 1197799.3,
+      "loc_share": 0.0038721011107620447,
+      "localization_coeff": 0.0007822426486387969
+    },
+    "Республика Ингушетия": {
+      "name": "Республика Ингушетия",
+      "svgId": "path1",
+      "onMap": true,
+      "budget_total": 38810.25,
+      "budget_metallurgy": 56.8,
+      "budget_share": 0.0014635308971212501,
+      "employment_total": 198303,
+      "employment_metallurgy": 142,
+      "employment_share": 0.0007160759040458289,
+      "shipment_metallurgy": 4303.4,
+      "shipment_total": 40086.9,
+      "shipment_share": 0.10735177826172639,
+      "loc_shipment_metallurgy": 4303.4,
+      "loc_shipment_total": 40086.9,
+      "loc_share": 0.10735177826172639,
+      "localization_coeff": 0.021687227931661897
+    },
+    "Новгородская область": {
+      "name": "Новгородская область",
+      "svgId": "Novgorodskaya",
+      "onMap": true,
+      "budget_total": 75018.55,
+      "budget_metallurgy": 102,
+      "budget_share": 0.0013596637098424323,
+      "employment_total": 272716,
+      "employment_metallurgy": 617,
+      "employment_share": 0.0022624268469763416,
+      "shipment_metallurgy": 23454.9,
+      "shipment_total": 641749.8,
+      "shipment_share": 0.03654835576107698,
+      "loc_shipment_metallurgy": 23454.9,
+      "loc_shipment_total": 641749.8,
+      "loc_share": 0.03654835576107698,
+      "localization_coeff": 0.007383506214358985
+    },
+    "Алтайский край": {
+      "name": "Алтайский край",
+      "svgId": "Altajskij",
+      "onMap": true,
+      "budget_total": 239015.34,
+      "budget_metallurgy": 304.7,
+      "budget_share": 0.0012748135747270447,
+      "employment_total": 1069505,
+      "employment_metallurgy": 4769,
+      "employment_share": 0.004459072187600806,
+      "shipment_metallurgy": 8982.2,
+      "shipment_total": 1435568.8,
+      "shipment_share": 0.006256892738265139,
+      "loc_shipment_metallurgy": 8982.2,
+      "loc_shipment_total": 1435568.8,
+      "loc_share": 0.006256892738265139,
+      "localization_coeff": 0.0012640187350030584
+    },
+    "Курганская область": {
+      "name": "Курганская область",
+      "svgId": "Kurganskaya",
+      "onMap": true,
+      "budget_total": 103799.67,
+      "budget_metallurgy": 124.7,
+      "budget_share": 0.0012013525669204923,
+      "employment_total": 313870,
+      "employment_metallurgy": 451,
+      "employment_share": 0.0014369006276483895,
+      "shipment_metallurgy": 3900.9,
+      "shipment_total": 692886.3,
+      "shipment_share": 0.005629928027152507,
+      "loc_shipment_metallurgy": 3900.9,
+      "loc_shipment_total": 692886.3,
+      "loc_share": 0.005629928027152507,
+      "localization_coeff": 0.0011373591974045468
+    },
+    "Ставропольский край": {
+      "name": "Ставропольский край",
+      "svgId": "Stavropolskij",
+      "onMap": true,
+      "budget_total": 246850.64,
+      "budget_metallurgy": 251.4,
+      "budget_share": 0.001018429605853969,
+      "employment_total": 1411026,
+      "employment_metallurgy": 1197,
+      "employment_share": 0.0008483188828554541,
+      "shipment_metallurgy": 22446.7,
+      "shipment_total": 1480271,
+      "shipment_share": 0.015163912553849938,
+      "loc_shipment_metallurgy": 22446.7,
+      "loc_shipment_total": 1480271,
+      "loc_share": 0.015163912553849938,
+      "localization_coeff": 0.003063416677545442
+    },
+    "Астраханская область": {
+      "name": "Астраханская область",
+      "svgId": "Astrahanskaya",
+      "onMap": true,
+      "budget_total": 89869.24,
+      "budget_metallurgy": 91.3,
+      "budget_share": 0.0010159204639985828,
+      "employment_total": 484784,
+      "employment_metallurgy": 544,
+      "employment_share": 0.001122149245849698,
+      "shipment_metallurgy": 2704.5,
+      "shipment_total": 695214.6,
+      "shipment_share": 0.003890165712860461,
+      "loc_shipment_metallurgy": 2704.5,
+      "loc_shipment_total": 695214.6,
+      "loc_share": 0.003890165712860461,
+      "localization_coeff": 0.0007858920632041335
+    },
+    "город Санкт-Петербург": {
+      "name": "город Санкт-Петербург",
+      "svgId": "city-spb",
+      "onMap": true,
+      "budget_total": 1412606.23,
+      "budget_metallurgy": 1351.6,
+      "budget_share": 0.0009568129966409676,
+      "employment_total": 3417898,
+      "employment_metallurgy": 9717,
+      "employment_share": 0.0028429754193951954,
+      "shipment_metallurgy": 115237.9,
+      "shipment_total": 13548460.3,
+      "shipment_share": 0.008505608567196376,
+      "loc_shipment_metallurgy": 115237.9,
+      "loc_shipment_total": 13548460.3,
+      "loc_share": 0.008505608567196376,
+      "localization_coeff": 0.0017183047610497728
+    },
+    "Приморский край": {
+      "name": "Приморский край",
+      "svgId": "Primorskij",
+      "onMap": true,
+      "budget_total": 304056.88,
+      "budget_metallurgy": 289.5,
+      "budget_share": 0.0009521244840767951,
+      "employment_total": 541114,
+      "employment_metallurgy": 724,
+      "employment_share": 0.0013379805364488813,
+      "shipment_metallurgy": 8375.3,
+      "shipment_total": 1994639.8,
+      "shipment_share": 0.004198903481220017,
+      "loc_shipment_metallurgy": 8375.3,
+      "loc_shipment_total": 1994639.8,
+      "loc_share": 0.004198903481220017,
+      "localization_coeff": 0.0008482633295393974
+    },
+    "Республика Саха (Якутия)": {
+      "name": "Республика Саха (Якутия)",
+      "svgId": "Saha",
+      "onMap": true,
+      "budget_total": 387015.88,
+      "budget_metallurgy": 276.6,
+      "budget_share": 0.0007146993554889789,
+      "employment_total": 428173,
+      "employment_metallurgy": 84,
+      "employment_share": 0.0001961823842231995,
+      "shipment_metallurgy": 71.1,
+      "shipment_total": 2740704.2,
+      "shipment_share": 2.5942237765024035e-05,
+      "loc_shipment_metallurgy": 71.1,
+      "loc_shipment_total": 2740704.2,
+      "loc_share": 2.5942237765024035e-05,
+      "localization_coeff": 5.24085611414627e-06
+    },
+    "Ямало-Ненецкий автономный округ": {
+      "name": "Ямало-Ненецкий автономный округ",
+      "svgId": "Yamalo-Nenetskij",
+      "onMap": true,
+      "budget_total": 344057.18,
+      "budget_metallurgy": 205.9,
+      "budget_share": 0.0005984470372046879,
+      "employment_total": 411095,
+      "employment_metallurgy": 10,
+      "employment_share": 2.4325277612230748e-05,
+      "shipment_metallurgy": 0,
+      "shipment_total": 6232692.2,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 6232692.2,
+      "loc_share": 0,
+      "localization_coeff": 0
+    },
+    "Ярославская область": {
+      "name": "Ярославская область",
+      "svgId": "Yaroslavskaya",
+      "onMap": true,
+      "budget_total": 150541.92,
+      "budget_metallurgy": 80.6,
+      "budget_share": 0.0005353990436683682,
+      "employment_total": 591956,
+      "employment_metallurgy": 510,
+      "employment_share": 0.0008615505206468048,
+      "shipment_metallurgy": 1978.7,
+      "shipment_total": 1200624.5,
+      "shipment_share": 0.0016480589893009847,
+      "loc_shipment_metallurgy": 1978.7,
+      "loc_shipment_total": 1200624.5,
+      "loc_share": 0.0016480589893009847,
+      "localization_coeff": 0.0003329412099597949
+    },
+    "Псковская область": {
+      "name": "Псковская область",
+      "svgId": "Pskovskaya",
+      "onMap": true,
+      "budget_total": 68391.98,
+      "budget_metallurgy": 35.7,
+      "budget_share": 0.0005219910287726719,
+      "employment_total": 285988,
+      "employment_metallurgy": 255,
+      "employment_share": 0.000891645803320419,
+      "shipment_metallurgy": 779.4,
+      "shipment_total": 450144.8,
+      "shipment_share": 0.0017314428601641072,
+      "loc_shipment_metallurgy": 779.4,
+      "loc_shipment_total": 450144.8,
+      "loc_share": 0.0017314428601641072,
+      "localization_coeff": 0.0003497864363967893
+    },
+    "Республика Бурятия": {
+      "name": "Республика Бурятия",
+      "svgId": "Buryatiya",
+      "onMap": true,
+      "budget_total": 137253.56,
+      "budget_metallurgy": 68,
+      "budget_share": 0.0004954334153518496,
+      "employment_total": 373205,
+      "employment_metallurgy": 724,
+      "employment_share": 0.0019399525729826771,
+      "shipment_metallurgy": 11379.3,
+      "shipment_total": 581113,
+      "shipment_share": 0.019581905756711687,
+      "loc_shipment_metallurgy": 11379.3,
+      "loc_shipment_total": 581113,
+      "loc_share": 0.019581905756711687,
+      "localization_coeff": 0.003955940556911452
+    },
+    "Калининградская область": {
+      "name": "Калининградская область",
+      "svgId": "Kaliningradskaya",
+      "onMap": true,
+      "budget_total": 177761.06,
+      "budget_metallurgy": 70.7,
+      "budget_share": 0.000397724901055383,
+      "employment_total": 533322,
+      "employment_metallurgy": 692,
+      "employment_share": 0.0012975275724609148,
+      "shipment_metallurgy": 2005.4,
+      "shipment_total": 1194538.3,
+      "shipment_share": 0.0016788076196468543,
+      "loc_shipment_metallurgy": 2005.4,
+      "loc_shipment_total": 1194538.3,
+      "loc_share": 0.0016788076196468543,
+      "localization_coeff": 0.000339153054474112
+    },
+    "Курская область": {
+      "name": "Курская область",
+      "svgId": "Kurskaya",
+      "onMap": true,
+      "budget_total": 275662.98,
+      "budget_metallurgy": 88.7,
+      "budget_share": 0.00032176972040279044,
+      "employment_total": 508088,
+      "employment_metallurgy": 501,
+      "employment_share": 0.0009860496606886996,
+      "shipment_metallurgy": 3.4,
+      "shipment_total": 1107974.8,
+      "shipment_share": 3.0686618504319773e-06,
+      "loc_shipment_metallurgy": 3.4,
+      "loc_shipment_total": 1107974.8,
+      "loc_share": 3.0686618504319773e-06,
+      "localization_coeff": 6.19931686955955e-07
+    },
+    "Магаданская область": {
+      "name": "Магаданская область",
+      "svgId": "Magadanskaya",
+      "onMap": true,
+      "budget_total": 104888.62,
+      "budget_metallurgy": 30.8,
+      "budget_share": 0.0002936448205725273,
+      "employment_total": 402117,
+      "employment_metallurgy": 79,
+      "employment_share": 0.00019646023421044124,
+      "shipment_metallurgy": 0,
+      "shipment_total": 704412,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 704412,
+      "loc_share": 0,
+      "localization_coeff": 0
+    },
+    "Республика Адыгея": {
+      "name": "Республика Адыгея",
+      "svgId": "Adygeya",
+      "onMap": true,
+      "budget_total": 53643.67,
+      "budget_metallurgy": 12.8,
+      "budget_share": 0.00023861156404847024,
+      "employment_total": 159011,
+      "employment_metallurgy": 86,
+      "employment_share": 0.000540843086327361,
+      "shipment_metallurgy": 890.8,
+      "shipment_total": 239117.8,
+      "shipment_share": 0.0037253604708641515,
+      "loc_shipment_metallurgy": 890.8,
+      "loc_shipment_total": 239117.8,
+      "loc_share": 0.0037253604708641515,
+      "localization_coeff": 0.0007525980749220508
+    },
+    "Кабардино-Балкарская Республика": {
+      "name": "Кабардино-Балкарская Республика",
+      "svgId": "Kabardino-Balkariya",
+      "onMap": true,
+      "budget_total": 76330.5,
+      "budget_metallurgy": 13.3,
+      "budget_share": 0.0001742422753682997,
+      "employment_total": 384645,
+      "employment_metallurgy": 15,
+      "employment_share": 3.89969972312132e-05,
+      "shipment_metallurgy": 5.8,
+      "shipment_total": 176930.3,
+      "shipment_share": 3.278127036465772e-05,
+      "loc_shipment_metallurgy": 5.8,
+      "loc_shipment_total": 176930.3,
+      "loc_share": 3.278127036465772e-05,
+      "localization_coeff": 6.622478861547014e-06
+    },
+    "Чукотский автономный округ": {
+      "name": "Чукотский автономный округ",
+      "svgId": "Chukotskij",
+      "onMap": true,
+      "budget_total": 73240.14,
+      "budget_metallurgy": 11.5,
+      "budget_share": 0.00015701772279517762,
+      "employment_total": 34122,
+      "employment_metallurgy": 0,
+      "employment_share": 0,
+      "shipment_metallurgy": 0,
+      "shipment_total": 344457.9,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 344457.9,
+      "loc_share": 0,
+      "localization_coeff": 0
+    },
+    "Архангельская область": {
+      "name": "Архангельская область",
+      "svgId": "Arhangelskaya",
+      "onMap": true,
+      "budget_total": 160488.5,
+      "budget_metallurgy": 19.7,
+      "budget_share": 0.00012275022820949788,
+      "employment_total": 457186,
+      "employment_metallurgy": 155,
+      "employment_share": 0.0003390305039961854,
+      "shipment_metallurgy": 122.9,
+      "shipment_total": 798692.3,
+      "shipment_share": 0.00015387653042354358,
+      "loc_shipment_metallurgy": 122.9,
+      "loc_shipment_total": 798692.3,
+      "loc_share": 0.00015387653042354358,
+      "localization_coeff": 3.1086167762332035e-05
+    },
+    "Ханты-Мансийский автономный округ - Югра": {
+      "name": "Ханты-Мансийский автономный округ - Югра",
+      "svgId": "Hanty-Mansijskij",
+      "onMap": true,
+      "budget_total": 515027.47,
+      "budget_metallurgy": 43.2,
+      "budget_share": 8.38790210549352e-05,
+      "employment_total": 1099101,
+      "employment_metallurgy": 281,
+      "employment_share": 0.00025566349225412407,
+      "shipment_metallurgy": 371.7,
+      "shipment_total": 9646678,
+      "shipment_share": 3.853139909925468e-05,
+      "loc_shipment_metallurgy": 371.7,
+      "loc_shipment_total": 9646678,
+      "loc_share": 3.853139909925468e-05,
+      "localization_coeff": 7.784121030152462e-06
+    },
+    "Республика Алтай": {
+      "name": "Республика Алтай",
+      "svgId": "Altaj",
+      "onMap": true,
+      "budget_total": 49202.65,
+      "budget_metallurgy": 3.8,
+      "budget_share": 7.723161252493513e-05,
+      "employment_total": 84064,
+      "employment_metallurgy": 408,
+      "employment_share": 0.0048534449942900645,
+      "shipment_metallurgy": 1849,
+      "shipment_total": 77754.5,
+      "shipment_share": 0.023779974149406143,
+      "loc_shipment_metallurgy": 1849,
+      "loc_shipment_total": 77754.5,
+      "loc_share": 0.023779974149406143,
+      "localization_coeff": 0.00480403518169821
+    },
+    "Еврейская автономная область": {
+      "name": "Еврейская автономная область",
+      "svgId": "Evrejskaya",
+      "onMap": true,
+      "budget_total": 33489.95,
+      "budget_metallurgy": 2.3,
+      "budget_share": 6.867731961379458e-05,
+      "employment_total": 64026,
+      "employment_metallurgy": 87,
+      "employment_share": 0.0013588229781651205,
+      "shipment_metallurgy": 37,
+      "shipment_total": 115503.4,
+      "shipment_share": 0.00032033689051577706,
+      "loc_shipment_metallurgy": 37,
+      "loc_shipment_total": 115503.4,
+      "loc_share": 0.00032033689051577706,
+      "localization_coeff": 6.471452333652062e-05
+    },
+    "Чеченская Республика": {
+      "name": "Чеченская Республика",
+      "svgId": "Chechnya",
+      "onMap": true,
+      "budget_total": 176353.07,
+      "budget_metallurgy": 10.9,
+      "budget_share": 6.180782676479633e-05,
+      "employment_total": 575432,
+      "employment_metallurgy": 60,
+      "employment_share": 0.00010426948796730109,
+      "shipment_metallurgy": 0,
+      "shipment_total": 309243.8,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 309243.8,
+      "loc_share": 0,
+      "localization_coeff": 0
+    },
+    "Камчатский край": {
+      "name": "Камчатский край",
+      "svgId": "Kamchatskij",
+      "onMap": true,
+      "budget_total": 174310.5,
+      "budget_metallurgy": 7.1,
+      "budget_share": 4.073191230591387e-05,
+      "employment_total": 696546,
+      "employment_metallurgy": 43,
+      "employment_share": 6.173318057960278e-05,
+      "shipment_metallurgy": 221.8,
+      "shipment_total": 526785.3,
+      "shipment_share": 0.0004210443989230527,
+      "loc_shipment_metallurgy": 221.8,
+      "loc_shipment_total": 526785.3,
+      "loc_share": 0.0004210443989230527,
+      "localization_coeff": 8.505947452990964e-05
+    },
+    "Республика Крым": {
+      "name": "Республика Крым",
+      "svgId": "Krym",
+      "onMap": true,
+      "budget_total": 301730.02,
+      "budget_metallurgy": 11.9,
+      "budget_share": 3.943923113782314e-05,
+      "employment_total": 913076,
+      "employment_metallurgy": 443,
+      "employment_share": 0.0004851731947833477,
+      "shipment_metallurgy": 281.5,
+      "shipment_total": 703185.9,
+      "shipment_share": 0.00040032088242952535,
+      "loc_shipment_metallurgy": 281.5,
+      "loc_shipment_total": 703185.9,
+      "loc_share": 0.00040032088242952535,
+      "localization_coeff": 8.087290554131825e-05
+    },
+    "Амурская область": {
+      "name": "Амурская область",
+      "svgId": "Amurskaya",
+      "onMap": true,
+      "budget_total": 163518.01,
+      "budget_metallurgy": 5.7,
+      "budget_share": 3.485854555103747e-05,
+      "employment_total": 960319,
+      "employment_metallurgy": 70,
+      "employment_share": 7.289244511459214e-05,
+      "shipment_metallurgy": 58.2,
+      "shipment_total": 1243539.8,
+      "shipment_share": 4.6801879602084306e-05,
+      "loc_shipment_metallurgy": 58.2,
+      "loc_shipment_total": 1243539.8,
+      "loc_share": 4.6801879602084306e-05,
+      "localization_coeff": 9.454925172138244e-06
+    },
+    "Республика Калмыкия": {
+      "name": "Республика Калмыкия",
+      "svgId": "Kalmykia",
+      "onMap": true,
+      "budget_total": 40975.7,
+      "budget_metallurgy": 1.4,
+      "budget_share": 3.416659141881652e-05,
+      "employment_total": 125898,
+      "employment_metallurgy": 1,
+      "employment_share": 7.942937933882985e-06,
+      "shipment_metallurgy": 0,
+      "shipment_total": 55449.7,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 55449.7,
+      "loc_share": 0,
+      "localization_coeff": 0
+    },
+    "Сахалинская область": {
+      "name": "Сахалинская область",
+      "svgId": "Sahalinskaya",
+      "onMap": true,
+      "budget_total": 235197.03,
+      "budget_metallurgy": 7.5,
+      "budget_share": 3.188815777138002e-05,
+      "employment_total": 83033,
+      "employment_metallurgy": 37,
+      "employment_share": 0.00044560596389387353,
+      "shipment_metallurgy": 114.6,
+      "shipment_total": 1615042.5,
+      "shipment_share": 7.095788500921801e-05,
+      "loc_shipment_metallurgy": 114.6,
+      "loc_shipment_total": 1615042.5,
+      "loc_share": 7.095788500921801e-05,
+      "localization_coeff": 1.4334926264488487e-05
+    },
+    "Республика Марий-Эл": {
+      "name": "Республика Марий-Эл",
+      "svgId": "Marij_El",
+      "onMap": true,
+      "budget_total": 74270.66,
+      "budget_metallurgy": 2.1,
+      "budget_share": 2.8274960798786493e-05,
+      "employment_total": 298998,
+      "employment_metallurgy": 197,
+      "employment_share": 0.0006588672833931999,
+      "shipment_metallurgy": 40.5,
+      "shipment_total": 484554.6,
+      "shipment_share": 8.358191213126447e-05,
+      "loc_shipment_metallurgy": 40.5,
+      "loc_shipment_total": 484554.6,
+      "loc_share": 8.358191213126447e-05,
+      "localization_coeff": 1.688523477399282e-05
+    },
+    "город Севастополь": {
+      "name": "город Севастополь",
+      "svgId": "city-sevastopol",
+      "onMap": true,
+      "budget_total": 86217.5,
+      "budget_metallurgy": 1,
+      "budget_share": 1.1598573375474817e-05,
+      "employment_total": 262219,
+      "employment_metallurgy": 106,
+      "employment_share": 0.00040424225551924153,
+      "shipment_metallurgy": 46.6,
+      "shipment_total": 159468.2,
+      "shipment_share": 0.0002922212704476504,
+      "loc_shipment_metallurgy": 46.6,
+      "loc_shipment_total": 159468.2,
+      "loc_share": 0.0002922212704476504,
+      "localization_coeff": 5.903460009043442e-05
+    },
+    "Республика Дагестан": {
+      "name": "Республика Дагестан",
+      "svgId": "Dagestan",
+      "onMap": true,
+      "budget_total": 242254.25,
+      "budget_metallurgy": 2.1,
+      "budget_share": 8.668578569829013e-06,
+      "employment_total": 1268896,
+      "employment_metallurgy": 193,
+      "employment_share": 0.00015210072377878092,
+      "shipment_metallurgy": 0.7,
+      "shipment_total": 613791.5,
+      "shipment_share": 1.140452417474012e-06,
+      "loc_shipment_metallurgy": 0.7,
+      "loc_shipment_total": 613791.5,
+      "loc_share": 1.140452417474012e-06,
+      "localization_coeff": 2.3039442777252764e-07
+    },
+    "Ненецкий автономный округ": {
+      "name": "Ненецкий автономный округ",
+      "svgId": "Nenetskij",
+      "onMap": true,
+      "budget_total": 32534.45,
+      "budget_metallurgy": 0,
+      "budget_share": 0,
+      "employment_total": 0,
+      "employment_metallurgy": 0,
+      "employment_share": 0,
+      "shipment_metallurgy": 0,
+      "shipment_total": 512301.7,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 512301.7,
+      "loc_share": 0,
+      "localization_coeff": 0
+    },
+    "Карачаево-Черкесская Республика": {
+      "name": "Карачаево-Черкесская Республика",
+      "svgId": "Karachaevo-Cherkessiya",
+      "onMap": true,
+      "budget_total": 46639.59,
+      "budget_metallurgy": 0,
+      "budget_share": 0,
+      "employment_total": 195049,
+      "employment_metallurgy": 0,
+      "employment_share": 0,
+      "shipment_metallurgy": 0,
+      "shipment_total": 126790,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 126790,
+      "loc_share": 0,
+      "localization_coeff": 0
+    },
+    "Республика Тыва": {
+      "name": "Республика Тыва",
+      "svgId": "Tyva",
+      "onMap": true,
+      "budget_total": 74376.49,
+      "budget_metallurgy": 0,
+      "budget_share": 0,
+      "employment_total": 120336,
+      "employment_metallurgy": 213,
+      "employment_share": 0.0017700438771439968,
+      "shipment_metallurgy": 0,
+      "shipment_total": 81441.5,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 81441.5,
+      "loc_share": 0,
+      "localization_coeff": 0
+    },
+    "Республика Коми": {
+      "name": "Республика Коми",
+      "svgId": "Komi",
+      "onMap": true,
+      "budget_total": 125774.33,
+      "budget_metallurgy": -46.9,
+      "budget_share": -0.0003728900801936293,
+      "employment_total": 341395,
+      "employment_metallurgy": 1081,
+      "employment_share": 0.0031664201291758814,
+      "shipment_metallurgy": 47320.5,
+      "shipment_total": 1379988.2,
+      "shipment_share": 0.03429051060001818,
+      "loc_shipment_metallurgy": 47320.5,
+      "loc_shipment_total": 1379988.2,
+      "loc_share": 0.03429051060001818,
+      "localization_coeff": 0.00692737587879155
+    },
+    "Республика Карелия": {
+      "name": "Республика Карелия",
+      "svgId": "Kareliya",
+      "onMap": true,
+      "budget_total": 93080.2,
+      "budget_metallurgy": -485.8,
+      "budget_share": -0.00521915509420908,
+      "employment_total": 231205,
+      "employment_metallurgy": 702,
+      "employment_share": 0.0030362665167275793,
+      "shipment_metallurgy": 4329.4,
+      "shipment_total": 518730.1,
+      "shipment_share": 0.008346151495739307,
+      "loc_shipment_metallurgy": 4329.4,
+      "loc_shipment_total": 518730.1,
+      "loc_share": 0.008346151495739307,
+      "localization_coeff": 0.001686091211260466
+    },
+    "Донецкая Народная Республика": {
+      "name": "Донецкая Народная Республика",
+      "svgId": "path1040",
+      "onMap": true,
+      "budget_total": 0,
+      "budget_metallurgy": 0,
+      "budget_share": 0,
+      "employment_total": 0,
+      "employment_metallurgy": 0,
+      "employment_share": 0,
+      "shipment_metallurgy": 0,
+      "shipment_total": 0,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 0,
+      "loc_share": 0,
+      "localization_coeff": 0
+    },
+    "Луганская Народная Республика": {
+      "name": "Луганская Народная Республика",
+      "svgId": "path1042",
+      "onMap": true,
+      "budget_total": 0,
+      "budget_metallurgy": 0,
+      "budget_share": 0,
+      "employment_total": 0,
+      "employment_metallurgy": 0,
+      "employment_share": 0,
+      "shipment_metallurgy": 0,
+      "shipment_total": 0,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 0,
+      "loc_share": 0,
+      "localization_coeff": 0
+    },
+    "Запорожская область": {
+      "name": "Запорожская область",
+      "svgId": "path1044",
+      "onMap": true,
+      "budget_total": 0,
+      "budget_metallurgy": 0,
+      "budget_share": 0,
+      "employment_total": 0,
+      "employment_metallurgy": 0,
+      "employment_share": 0,
+      "shipment_metallurgy": 0,
+      "shipment_total": 0,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 0,
+      "loc_share": 0,
+      "localization_coeff": 0
+    },
+    "Херсонская область": {
+      "name": "Херсонская область",
+      "svgId": "path1067",
+      "onMap": true,
+      "budget_total": 0,
+      "budget_metallurgy": 0,
+      "budget_share": 0,
+      "employment_total": 0,
+      "employment_metallurgy": 0,
+      "employment_share": 0,
+      "shipment_metallurgy": 0,
+      "shipment_total": 0,
+      "shipment_share": 0,
+      "loc_shipment_metallurgy": 0,
+      "loc_shipment_total": 0,
+      "loc_share": 0,
+      "localization_coeff": 0
+    }
+  }
+}
